@@ -9,7 +9,8 @@ export default {
     extend: {
       colors: {
         'primary': '#06C996',
-        'yellow': '#CFFF47'
+        'yellow': '#CFFF47',
+        'gray': '#676767'
       },
       keyframes: animations 
     },
@@ -36,6 +37,9 @@ export default {
     },
     backgroundImage: {
         'shapes-bg': "url('/img/bg.png')",
+      },
+boxShadow: {
+        'connect': '0px 4px 11.1px 0px rgba(0, 0, 0, 0.15)',
       }
   },
   plugins: [],
