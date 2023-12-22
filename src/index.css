@@ -9,6 +9,4 @@ html {
   box-sizing: inherit;
 }
 
-@keyframes move {
-  to { transform: translateX(-100%); }
-}
+
