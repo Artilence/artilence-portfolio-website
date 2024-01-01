@@ -78,5 +78,22 @@ big_screen_end: {
           'from': { transform: 'translate(-1555%, 0) scale(10.5, 10.5)', opacity: '1' },
           '99%': { opacity: '0.9' },
           'to': { transform: 'translate(1555%, 0) scale(10.5, 10.5)', opacity: '0' }
+},
+'v-tb-scroll': {
+'from': {
+    transform: 'translateY(-100%)'
+  },
+  'to': {
+    transform: 'translateY(0%)'
+  }
+},
+
+'v-bt-scroll': {
+'from': {
+    transform: 'translateY(100%)'
+  },
+  'to': {
+    transform: 'translateY(0%)'
+  }
 }
       }

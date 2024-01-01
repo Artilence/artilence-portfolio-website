@@ -9,52 +9,38 @@ import Image from "../shared/Image";
 import { clientsArray } from "../../constants";
 
 const Clients = () => {
-  const {
-    spaceBetween,
-    centeredSlides,
-    slidesPerView,
-    speed,
-    autoplay,
-    breakpoints,
-  } = {
-    spaceBetween: 30,
+  const { centeredSlides, speed, autoplay, breakpoints } = {
     centeredSlides: true,
-    slidesPerView: 5,
-    speed: 3000,
+    speed: 2000,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
     },
     breakpoints: {
       1024: {
-        slidesPerView: 5,
-      },
-      768: {
         slidesPerView: 3,
       },
-      640: {
+      768: {
         slidesPerView: 2,
+      },
+      640: {
+        slidesPerView: 1,
       },
     },
   };
   return (
-    <div className="h-full w-full flex">
+    <div className="flex h-[20vh]">
       <Swiper
-        spaceBetween={spaceBetween}
         centeredSlides={centeredSlides}
-        slidesPerView={slidesPerView}
         speed={speed}
         autoplay={autoplay}
         breakpoints={breakpoints}
         loop
         modules={[Autoplay]}
-        className="mySwiper h-full bg-white lg:h-[352px] md:h-[200px] sm:h-[150px]"
+        className="mySwiper h-full bg-white sm:h-[150px] md:h-[200px]  lg:h-[250px]  max-w-[100vw] overflow-hidden"
       >
         {clientsArray?.map(({ id, src, alt }) => (
-          <SwiperSlide
-            key={id}
-            className="h-full flex justify-center items-center "
-          >
+          <SwiperSlide key={id} className="flex justify-center items-center">
             <Image src={src} alt={alt} />
           </SwiperSlide>
         ))}

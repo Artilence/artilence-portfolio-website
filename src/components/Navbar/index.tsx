@@ -1,5 +1,22 @@
 import LogoLight from "../shared/icons/LogoLight";
-
+export const navList = [
+  {
+    id: 1,
+    name: "What we do",
+  },
+  {
+    id: 2,
+    name: "Our Partners",
+  },
+  {
+    id: 3,
+    name: "Client Testimonials",
+  },
+  {
+    id: 4,
+    name: "Contact Us",
+  },
+];
 const Navbar = () => {
   return (
     <div className="w-full flex justify-center sticky top-0 bg-primary z-[100]">

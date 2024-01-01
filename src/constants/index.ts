@@ -33,6 +33,42 @@ export const clientsArray: Client[] = [
         id: 7,
         src: '/img/client_logos/firststep.svg',
         alt: 'Firststep.io'
+    },
+
+    {
+        id: 12,
+        src: '/img/client_logos/agentaio.svg',
+        alt: 'AgentIO'
+    },
+    {
+        id: 23,
+        src: '/img/client_logos/chopcast.svg',
+        alt: 'Chopcast'
+    },
+    {
+        id: 34,
+        src: '/img/client_logos/tesla.svg',
+        alt: 'Tesla'
+    },
+    {
+        id: 45,
+        src: '/img/client_logos/medtronic.svg',
+        alt: 'Medtronic'
+    },
+    {
+        id: 56,
+        src: '/img/client_logos/lyftrondata.svg',
+        alt: 'Lyftrondata'
+    },
+    {
+        id: 68,
+        src: '/img/client_logos/voiceai.svg',
+        alt: 'Voice AI'
+    },
+    {
+        id: 79,
+        src: '/img/client_logos/firststep.svg',
+        alt: 'Firststep.io'
     }
 ]
 

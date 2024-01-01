@@ -1,55 +1,143 @@
 import { useEffect, useState } from "react";
 import AnimationFrameOne from "./AnimationFrameOne";
 import CircleGrid from "./CircleGrid";
+import { getRandomOddNumber } from "../../utils/getRandomOddNumber";
 
 const Hero = () => {
   const [isQuestionClicked, setIsQuestionClicked] = useState<boolean>(false);
   const [isGridVisible, setIsGridVisible] = useState<boolean>(false);
-  const [loadingPercentage, setLoadingPercentage] = useState(0);
+  // const [loadingPercentage, setLoadingPercentage] = useState(0);
 
   useEffect(() => {
-    if (isQuestionClicked && loadingPercentage < 100) {
+    if (!isQuestionClicked) {
       setTimeout(() => {
-        setLoadingPercentage(loadingPercentage + 25);
+        setIsQuestionClicked(true);
         return;
-      }, 500);
+      }, 5700);
     }
   });
+
+  // useEffect(() => {
+  //   if (isQuestionClicked && loadingPercentage < 100) {
+  //     setTimeout(() => {
+  //       setLoadingPercentage(loadingPercentage + 25);
+  //       return;
+  //     }, 500);
+  //   }
+  // });
 
   if (isGridVisible) return <CircleGrid />;
 
   return (
     <>
-      {}
-      {isQuestionClicked ? (
+      {false ? (
         <AnimationFrameOne setIsGridVisible={setIsGridVisible} />
       ) : (
-        <div className="flex-1 w-full flex flex-col justify-end items-end font-bold py-8 min-h-screen">
-          <div className="text-[150px] text-white  leading-[100%]">
-            finding tech
+        <div className="min-h-[50vh] sm:min-h-[60vh] w-full flex flex-col items-end  justify-end font-bold relative -top-[50px] px-4 sm:py-8  lg:min-h-screen  sm:-top-[100px] max-w-[1676px] mx-auto">
+          <div className="flex flex-col text-[60px] sm:text-[70px] sm:flex-row lg:text-[90px] xl:text-[150px] text-white">
+            <div className="flex items-center h-[70px] sm:h-[80px] lg:h-[105px] xl:h-[175px] 2xl:h-[180px] overflow-hidden gap-2">
+              {"finding".split("").map((letter, index) =>
+                index % 2 === 0 ? (
+                  <div
+                    key={index}
+                    className="-translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll"
+                  >
+                    {new Array(getRandomOddNumber()).fill(0).map(() => (
+                      <span>{letter}</span>
+                    ))}
+                  </div>
+                ) : (
+                  <div
+                    key={index}
+                    className="translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll"
+                  >
+                    {new Array(getRandomOddNumber()).fill(0).map(() => (
+                      <span>{letter}</span>
+                    ))}
+                  </div>
+                )
+              )}
+              <span className="w-[16px] hidden md:block"></span>
+            </div>
+            <div className="flex items-center justify-end h-[70px] sm:h-[80px] lg:h-[105px] xl:h-[175px] 2xl:h-[180px] overflow-hidden gap-2">
+              {"tech".split("").map((letter, index) =>
+                index % 2 === 0 ? (
+                  <div
+                    key={index}
+                    className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll"
+                  >
+                    {new Array(getRandomOddNumber()).fill(0).map(() => (
+                      <span>{letter}</span>
+                    ))}
+                  </div>
+                ) : (
+                  <div
+                    key={index}
+                    className="translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll"
+                  >
+                    {new Array(getRandomOddNumber()).fill(0).map(() => (
+                      <span>{letter}</span>
+                    ))}
+                  </div>
+                )
+              )}
+            </div>
           </div>
-          <div className="flex text-[#FFFFFF]/50  text-[390px]  leading-[80%] ">
-            <div className="">alliance</div>
+          <div className="flex text-[#FFFFFF]/50 text-[76px] sm:text-[120px] lg:text-[140px] xl:text-[240px] 2xl:text-[300px] 2xl:text-[390px] ">
+            <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[140px] xl:h-[240px] 2xl:h-[300px]  overflow-hidden">
+              {"alliance".split("").map((letter, index) =>
+                index % 2 === 0 ? (
+                  <div
+                    key={index}
+                    className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg"
+                  >
+                    {new Array(getRandomOddNumber()).fill(0).map(() => (
+                      <span className="leading-loose xl:leading-none">
+                        {letter}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <div
+                    key={index}
+                    className="translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll-lg"
+                  >
+                    {new Array(getRandomOddNumber()).fill(0).map(() => (
+                      <span className="leading-loose xl:leading-none">
+                        {letter}
+                      </span>
+                    ))}
+                  </div>
+                )
+              )}
+            </div>
             {!isQuestionClicked ? (
               <div
-                className="tracking-tighter relative animate-gelatine cursor-pointer"
+                className="tracking-tighter relative cursor-pointer"
                 onClick={() => {
                   setIsQuestionClicked(true);
                 }}
               >
-                ?
-                <div className="w-[55px] h-[50px] overflow-hidden absolute bottom-[8%] left-[43%]">
-                  <div className=" w-[100px] text-lg  text-primary absolute bottom-[12%] left-[43%] tracking-normal  translate-x-[100%] animate-move ">
-                    Click Me
+                <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[140px] xl:h-[240px] 2xl:h-[300px] overflow-hidden">
+                  <div className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg">
+                    <span>?</span>
+                    <span>?</span>
+                    <span>?</span>
                   </div>
                 </div>
               </div>
             ) : (
               <div
-                className="tracking-tighter relative transition-colors hover:color-yellow-300 text"
-                onClick={() => console.log("question mark clicked")}
+                className="tracking-tighter relative cursor-pointer"
+                onClick={() => {
+                  setIsQuestionClicked(true);
+                }}
               >
-                ?
+                <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[140px] xl:h-[240px] 2xl:h-[300px] overflow-hidden">
+                  <div className="flex flex-col justify-center items-center  animated-text relative  animate-fill-text ">
+                    <span className="">?</span>
+                  </div>
+                </div>
               </div>
             )}
           </div>
