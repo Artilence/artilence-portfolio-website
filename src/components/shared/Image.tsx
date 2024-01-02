@@ -1,5 +1,13 @@
-const Image = ({ src, alt, height, width }: ImageProps) => {
-  return <img src={src} alt={alt} height={height} width={width} />;
+const Image = ({ src, alt, height, width, className }: ImageProps) => {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      height={height}
+      width={width}
+      className={className || ""}
+    />
+  );
 };
 
 interface ImageProps {
@@ -7,6 +15,7 @@ interface ImageProps {
   alt: string;
   height?: number;
   width?: number;
+  className?: string;
 }
 
 export default Image;

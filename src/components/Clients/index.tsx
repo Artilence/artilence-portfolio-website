@@ -37,7 +37,7 @@ const Clients = () => {
         breakpoints={breakpoints}
         loop
         modules={[Autoplay]}
-        className="mySwiper h-full bg-white sm:h-[150px] md:h-[200px]  lg:h-[250px]  max-w-[100vw] overflow-hidden"
+        className="mySwiper h-full bg-white overflow-hidden"
       >
         {clientsArray?.map(({ id, src, alt }) => (
           <SwiperSlide key={id} className="flex justify-center items-center">
