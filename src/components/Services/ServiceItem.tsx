@@ -4,7 +4,7 @@ import Image from "../shared/Image";
 const ServiceItem = ({ title, imageInfo }: IServiceItemProps) => {
   return (
     <div
-      className={` max-h-[503px] sm:max-h-[501px] md:max-h-[386px] lg:max-h-[551px] xl:max-h-[706px] flex flex-col xl:flex-row 2xl:min-h-screen`}
+      className={` max-h-[503px] sm:max-h-[501px]  lg:max-h-[551px] xl:max-h-[706px] flex flex-col xl:flex-row 2xl:min-h-screen`}
     >
       <div
         className={`bg-primary  p-6 xl:flex-1 xl:p-32 xl:flex xl:flex-col xl:justify-center`}
@@ -14,24 +14,30 @@ const ServiceItem = ({ title, imageInfo }: IServiceItemProps) => {
       </div>
       <div
         className={`h-[620px] bg-yellow p-6 flex justify-center items-center
-        md:p-12
+        md:p-10
           xl:flex-1 xl:h-auto
 
           `}
       >
         <div
           className={`grid grid-cols-3 gap-x-[72px] gap-y-6
-       md:gap-x-32  md:gap-y-28
+       md:gap-x-32  
+       lg:gap-y-10
         `}
         >
           {imageInfo.map(({ src, alt, id }) => (
             <div
               key={id}
               className={`animate-bounce original-box-shadow h-[54px] w-[54px] bg-white rounded-full p-2 flex justify-center items-center
-             sm:h-[100px] sm:w-[100px]
+
+             sm:h-[100px] sm:w-[100px] sm:p-5
               2xl:h-[180px] 2xl:w-[180px] `}
             >
-              <Image src={src} alt={alt} />
+              <Image
+                src={src}
+                alt={alt}
+                className="w-[34px] sm:w-[70px] 2xl:w-[120px]"
+              />
             </div>
           ))}
         </div>

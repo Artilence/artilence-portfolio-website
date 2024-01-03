@@ -4,7 +4,7 @@ import ServiceItem from "./ServiceItem";
 const Services = () => {
   return (
     <div>
-      <ul id="cards">
+      <ul id="cards lg:mb-[var(--cardMargin)]">
         <li className="card">
           <div className="card-body">
             <div
