@@ -44,7 +44,7 @@ html {
 
 :root {
   --cards: 4;
-  --cardHeight: 87vh;
+  --cardHeight: 63vh;
   --cardTopPadding: 1.5em;
   --cardMargin: 4vw;
 }
@@ -79,31 +79,26 @@ html {
 .card {
   position: sticky;
   top: 0;
-  padding-top: calc(var(--index) * var(--cardTopPadding));
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
 }
 
-#card1 .card-body {
+#card1 {
   background-color: #52b2cf;
 }
-#card2 .card-body {
+#card2 {
   /* background-color: #7EC4CF; */
   background-color: #e5a36f;
 }
-#card3 .card-body {
+#card3 {
   background-color: #9cadce;
 }
-#card4 .card-body {
+#card4 {
   background-color: #d4afb9;
 }
 
 .card-body {
   box-sizing: border-box;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
   height: var(--cardHeight);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.5s;
 }
 

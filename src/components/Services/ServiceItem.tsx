@@ -4,7 +4,7 @@ import Image from "../shared/Image";
 const ServiceItem = ({ title, imageInfo }: IServiceItemProps) => {
   return (
     <div
-      className={` min-h-[503px] sm:min-h-[501px] md:min-h-[386px] lg:min-h-[551px] xl:min-h-[706px] flex flex-col xl:flex-row 2xl:min-h-screen`}
+      className={` max-h-[503px] sm:max-h-[501px] md:max-h-[386px] lg:max-h-[551px] xl:max-h-[706px] flex flex-col xl:flex-row 2xl:min-h-screen`}
     >
       <div
         className={`bg-primary  p-6 xl:flex-1 xl:p-32 xl:flex xl:flex-col xl:justify-center`}
@@ -15,7 +15,8 @@ const ServiceItem = ({ title, imageInfo }: IServiceItemProps) => {
       <div
         className={`h-[620px] bg-yellow p-6 flex justify-center items-center
         md:p-12
-          xl:flex-1
+          xl:flex-1 xl:h-auto
+
           `}
       >
         <div
