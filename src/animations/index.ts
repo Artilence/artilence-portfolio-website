@@ -95,5 +95,14 @@ big_screen_end: {
   'to': {
     transform: 'translateY(0%)'
   }
-}
+}, 
+// bounce: {
+// '0%': {transform: "translateY(0)"} ,
+//  '20%': {transform: "translateY(0)"} ,
+//  '40%': {transform: "translateY(-20px)"} ,
+//   '50%': {transform: "translateY(-10)"} ,
+//  '60%': {transform: "translateY(-5px)"} ,
+//    '80%': {transform: "translateY(-2)"} ,
+//  '100%': {transform: "translateY(0)"} ,
+// }
       }

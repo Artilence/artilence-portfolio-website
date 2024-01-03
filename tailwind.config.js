@@ -34,7 +34,8 @@ theme: {
       'v-tb-scroll': 'v-tb-scroll 3s ease-out forwards',
       'v-bt-scroll':'v-bt-scroll 3s ease-out forwards 0.5s',
       'v-tb-scroll-lg': 'v-tb-scroll 3s ease-out forwards 3s',
-      'v-bt-scroll-lg':'v-bt-scroll 3s ease-out forwards 3s' 
+      'v-bt-scroll-lg':'v-bt-scroll 3s ease-out forwards 3s' ,
+      'bounce': 'bounce 3s ease-in-out infinite'
     },
     fontFamily: {
       'sans': ['Helvetica',]
