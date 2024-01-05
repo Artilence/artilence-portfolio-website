@@ -21,7 +21,14 @@ const Navbar = () => {
         <div className="flex flex-col  px-4 max-w-[1676px] mx-auto md:flex-row md:px-8">
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="/">
-              <LogoLight />
+              <LogoLight className="hidden md:block" />
+              <img
+                className="md:hidden"
+                src="/logo-symbol.svg"
+                width="32"
+                height="32"
+                fill="white"
+              />
             </a>
             <div className="md:hidden">
               <button

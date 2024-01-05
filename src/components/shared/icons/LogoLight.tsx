@@ -1,4 +1,4 @@
-const LogoLight = () => {
+const LogoLight = ({ className }: ISVGProps) => {
   return (
     <svg
       width="220"
@@ -7,6 +7,7 @@ const LogoLight = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      className={className}
     >
       <rect width="220" height="49" fill="#F5F5F5" />
       <path d="M-133 -49H1787V851H-133V-49Z" fill="#06C996" />
