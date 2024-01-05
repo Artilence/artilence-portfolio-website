@@ -4,7 +4,7 @@ import ServiceItem from "./ServiceItem";
 const Services = () => {
   return (
     <div>
-      <ul id="cards lg:mb-[var(--cardMargin)]">
+      <ul id="cards ">
         <li className="card">
           <div className="card-body">
             <div
@@ -14,9 +14,8 @@ const Services = () => {
             >
               <div
                 className={`
-      max-w-[1676px] flex flex-col p-9 gap-5 justify-between items-between text-white mx-auto
-      sm:p-7
-      md:flex-row md:gap-36 md:px-16
+      max-w-[1676px] flex flex-col p-4 gap-5 justify-between items-between text-white mx-auto
+      md:flex-row md:gap-36 md:px-8
       2xl:py-[150px] 2xl:gap-52
         `}
               >

@@ -14,11 +14,11 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`relative z-20 bg-primary w-full md:static md:text-sm md:border-none ${
+        className={`fixed z-20 bg-primary w-full md:text-sm md:border-none ${
           state && "min-h-screen"
         }`}
       >
-        <div className="flex flex-col gap-x-14 px-4 max-w-[1676px] mx-auto md:flex-row md:px-8">
+        <div className="flex flex-col  px-4 max-w-[1676px] mx-auto md:flex-row md:px-8">
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="/">
               <LogoLight />

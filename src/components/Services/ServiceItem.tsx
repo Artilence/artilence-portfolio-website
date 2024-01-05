@@ -1,5 +1,4 @@
 import { ImageObject } from "../../constants";
-
 import Image from "../shared/Image";
 const ServiceItem = ({ title, imageInfo }: IServiceItemProps) => {
   return (

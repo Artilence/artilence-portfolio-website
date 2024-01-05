@@ -1,0 +1,3 @@
+interface ISVGProps {
+    className?: string
+}

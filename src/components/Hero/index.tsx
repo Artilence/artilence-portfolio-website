@@ -33,9 +33,9 @@ const Hero = () => {
       {false ? (
         <AnimationFrameOne setIsGridVisible={setIsGridVisible} />
       ) : (
-        <div className="min-h-[50vh] sm:min-h-[60vh] w-full flex flex-col items-end  justify-end font-bold relative -top-[50px] px-4 sm:py-8  lg:min-h-screen  sm:-top-[100px] max-w-[1676px] mx-auto">
-          <div className="flex flex-col text-[60px] sm:text-[70px] sm:flex-row lg:text-[90px] xl:text-[150px] text-white">
-            <div className="flex items-center h-[70px] sm:h-[80px] lg:h-[105px] xl:h-[175px] 2xl:h-[180px] overflow-hidden gap-2">
+        <div className="min-h-[40vh]  lg:-top-[100px] sm:min-h-[60vh] w-full flex flex-col items-end  justify-end font-bold relative px-4   lg:min-h-screen  max-w-[1676px] mx-auto">
+          <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white">
+            <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden gap-2">
               {"finding".split("").map((letter, index) =>
                 index % 2 === 0 ? (
                   <div
@@ -59,7 +59,7 @@ const Hero = () => {
               )}
               <span className="w-[16px] hidden md:block"></span>
             </div>
-            <div className="flex items-center justify-end h-[70px] sm:h-[80px] lg:h-[105px] xl:h-[175px] 2xl:h-[180px] overflow-hidden gap-2">
+            <div className="flex items-center justify-end h-[70px] sm:h-[105px]  lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden gap-2">
               {"tech".split("").map((letter, index) =>
                 index % 2 === 0 ? (
                   <div
@@ -83,8 +83,8 @@ const Hero = () => {
               )}
             </div>
           </div>
-          <div className="flex text-[#FFFFFF]/50 text-[76px] sm:text-[120px] lg:text-[140px] xl:text-[240px] 2xl:text-[300px] 2xl:text-[390px] ">
-            <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[140px] xl:h-[240px] 2xl:h-[300px]  overflow-hidden">
+          <div className="flex text-[#FFFFFF]/50 text-[76px] sm:text-[144px] md:text-[170px] lg:text-[230px] xl:text-[290px]  2xl:text-[387px] ">
+            <div className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]  overflow-hidden">
               {"alliance".split("").map((letter, index) =>
                 index % 2 === 0 ? (
                   <div
@@ -118,7 +118,7 @@ const Hero = () => {
                   setIsQuestionClicked(true);
                 }}
               >
-                <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[140px] xl:h-[240px] 2xl:h-[300px] overflow-hidden">
+                <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
                   <div className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg">
                     <span>?</span>
                     <span>?</span>
@@ -133,7 +133,7 @@ const Hero = () => {
                   setIsQuestionClicked(true);
                 }}
               >
-                <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[140px] xl:h-[240px] 2xl:h-[300px] overflow-hidden">
+                <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
                   <div className="flex flex-col justify-center items-center  animated-text relative  animate-fill-text ">
                     <span className="">?</span>
                   </div>
