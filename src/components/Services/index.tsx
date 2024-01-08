@@ -25,11 +25,11 @@ const Services = () => {
         `}
                 >
                   <div
-                    className={`flex flex-col justify-between text-[45px] font-light 
+                    className={`flex flex-col justify-between text-[45px] font-light leading-[89%]
           sm:text-[60px]
           lg:text-[90px]
           xl:text-[140px]
-          2xl:text-[200px] 2xl:leading-[89%]
+          2xl:text-[200px] 
             `}
                   >
                     <div
@@ -43,7 +43,7 @@ const Services = () => {
                   </div>
                   <div
                     className={`
-          h-[5px] bg-yellow
+          h-[5px] bg-yellow mt-[13px]
           lg:h-[10px]
           xl:h-[20px]
           `}

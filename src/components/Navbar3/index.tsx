@@ -14,12 +14,12 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed z-20 bg-primary w-full md:text-sm md:border-none ${
+        className={`fixed px-[18px] py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[49px] ${
           state && "min-h-screen"
         }`}
       >
-        <div className="flex flex-col  px-4 max-w-[1676px] mx-auto md:flex-row md:px-8">
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+        <div className="flex flex-col  max-w-[1676px] mx-auto md:flex-row">
+          <div className="flex items-center justify-between md:block">
             <a href="/">
               <LogoLight className="hidden md:block" />
               <img
@@ -76,7 +76,7 @@ const Navbar = () => {
                     {
                       <a
                         href={item.path}
-                        className="block text-white text-right text-4xl hover:text-yellow md:text-base"
+                        className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[20px]"
                       >
                         {item.title}
                       </a>

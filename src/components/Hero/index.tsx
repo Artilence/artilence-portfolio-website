@@ -33,7 +33,7 @@ const Hero = () => {
       {false ? (
         <AnimationFrameOne setIsGridVisible={setIsGridVisible} />
       ) : (
-        <div className="min-h-[40vh]  lg:-top-[100px] sm:min-h-[60vh] w-full flex flex-col items-end  justify-end font-bold relative px-4   lg:min-h-screen  max-w-[1676px] mx-auto">
+        <div className="min-h-[370px] pb-[45px] lg:-top-[100px] sm:min-h-[60vh] w-full flex flex-col items-end  justify-end font-bold relative px-[18px]   lg:min-h-screen  max-w-[1676px] mx-auto">
           <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white">
             <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden gap-2">
               {"finding".split("").map((letter, index) =>

@@ -1,10 +1,5 @@
-import { Component } from "react";
 import { socialIcons } from "../../constants";
 import { navList } from "../Navbar";
-import Image from "../shared/Image";
-import FacebookIcon from "../shared/icons/FacebookIcon";
-import InstagramIcon from "../shared/icons/InstagramIcon";
-import LinkedInIcon from "../shared/icons/LinkedInIcon";
 
 const Footer = () => {
   return (
@@ -25,7 +20,7 @@ relative  flex flex-wrap justify-between gap-6 z-0
 2xl:gap-[120px]
       `}
         >
-          {socialIcons?.map(({ id, component, alt }) => (
+          {socialIcons?.map(({ id, component }) => (
             <div
               key={id}
               className={`relative group w-[58px] h-[58px] flex justify-center items-center  border border-white hover:border-primary rounded-full
@@ -38,8 +33,6 @@ relative  flex flex-wrap justify-between gap-6 z-0
             `}
             >
               <div className="text-[8px] text-white group-hover:text-primary z-10">
-                {/* <Image src={src} alt={alt} className="h-[21px] w-[21px] " /> */}
-                {/* <Component className="h-[21px] w-[21px] group-hover:fill-primary" /> */}
                 {component({
                   className: `h-[21px] w-[21px] fill-white group-hover:fill-primary
                  sm:h-[60px] sm:w-[60px] 
