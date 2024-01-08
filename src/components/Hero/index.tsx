@@ -13,7 +13,7 @@ const Hero = () => {
       setTimeout(() => {
         setIsQuestionClicked(true);
         return;
-      }, 5700);
+      }, 5900);
     }
   });
 

@@ -27,7 +27,6 @@ const Navbar = () => {
                 src="/logo-symbol.svg"
                 width="32"
                 height="32"
-                fill="white"
               />
             </a>
             <div className="md:hidden">
