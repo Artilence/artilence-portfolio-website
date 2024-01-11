@@ -1,7 +1,16 @@
+import { useRef } from "react";
+
 import { techStack } from "../../constants";
 import ServiceItem from "./ServiceItem";
+import useIsInViewport from "../../hooks/useIsInViewport";
 
 const Services = () => {
+  const mainSlideRef = useRef<HTMLDivElement>(null);
+  const secondaySlidesRefs = Object.keys(techStack)?.map((_) =>
+    useRef<HTMLDivElement>(null)
+  );
+  const isMainSlideInViewport = useIsInViewport(mainSlideRef);
+
   return (
     <div>
       <ul id="cards ">
@@ -10,18 +19,19 @@ const Services = () => {
             <div
               className={`
       bg-shapes-bg bg-right bg-no-repeat bg-cover 
+ md:px-8
       `}
             >
               <div
                 className={`
-      max-w-[1676px] flex flex-col p-4 gap-5 justify-between items-between text-white mx-auto
-      md:flex-row md:gap-36 md:px-8
+      max-w-[1676px] flex flex-col gap-5 justify-between items-between text-white mx-auto
+      md:flex-row md:gap-36
       2xl:py-[150px] 2xl:gap-52
         `}
               >
                 <div
                   className={`
-      flex-1 flex flex-col justify-between w-full
+      flex-2 flex flex-col justify-between w-full
         `}
                 >
                   <div
@@ -29,8 +39,8 @@ const Services = () => {
           sm:text-[60px]
           lg:text-[90px]
           xl:text-[140px]
-          2xl:text-[200px] 
             `}
+                    ref={mainSlideRef}
                   >
                     <div
                       className={`
@@ -43,25 +53,27 @@ const Services = () => {
                   </div>
                   <div
                     className={`
-          h-[5px] bg-yellow mt-[13px]
+          h-[5px] bg-yellow max-w-[500px]
+          mt-5
           lg:h-[10px]
-          xl:h-[20px]
+          relative -top-5
+          ${isMainSlideInViewport && "animate-expand"}
+
           `}
                   ></div>
                 </div>
                 <div
                   className={`
-        flex-1 text-[17px] font-normal w-full
+        flex-3 text-[17px] font-light w-full text-justify
         sm:text-[20px]
         lg:text-[30px]
-        xl:text-[38px]
-        2xl:text-[48px]
+        xl:text-[40px]
         `}
                 >
                   <p
                     className={`
            w-full
-           2xl:leading-tight
+           2xl:leading-[1.6]
           `}
                   >
                     At Artilence, we specialize in forging strategic technical
@@ -75,13 +87,17 @@ const Services = () => {
             </div>
           </div>
         </li>
-        {Object.keys(techStack)?.map((key) => (
-          <li className="card">
-            <div className="card-body bg-yellow">
+        {Object.keys(techStack)?.map((key, index) => (
+          <li key={index} className="card">
+            <div
+              className="card-body bg-primary"
+              ref={secondaySlidesRefs[index]}
+            >
               <ServiceItem
                 key={key}
                 title={key}
                 imageInfo={techStack[key as keyof typeof techStack]}
+                isInviewport={useIsInViewport(secondaySlidesRefs[index])}
               />
             </div>
           </li>

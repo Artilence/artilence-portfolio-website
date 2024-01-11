@@ -9,39 +9,40 @@ import Image from "../shared/Image";
 import { clientsArray } from "../../constants";
 
 const Clients = () => {
-  const { centeredSlides, speed, autoplay, breakpoints } = {
+  const { centeredSlides, speed, autoplay } = {
     centeredSlides: true,
     speed: 2000,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
     },
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      640: {
-        slidesPerView: 1,
-      },
-    },
+    // breakpoints: {
+    //   1024: {
+    //     slidesPerView: 3,
+    //   },
+    //   768: {
+    //     slidesPerView: 2,
+    //   },
+    //   640: {
+    //     slidesPerView: 1,
+    //   },
+    // },
   };
   return (
-    <div className="flex h-[20vh]">
+    <div className="flex">
       <Swiper
         centeredSlides={centeredSlides}
         speed={speed}
         autoplay={autoplay}
-        breakpoints={breakpoints}
+        // breakpoints={breakpoints}
+        slidesPerView={3}
         loop
         modules={[Autoplay]}
-        className="mySwiper h-full bg-white overflow-hidden"
+        className="mySwiper overflow-hidden bg-white"
       >
         {clientsArray?.map(({ id, src, alt }) => (
           <SwiperSlide key={id} className="flex justify-center items-center">
-            <Image src={src} alt={alt} />
+            <Image src={src} alt={alt} width={235} className="py-40" />
           </SwiperSlide>
         ))}
       </Swiper>

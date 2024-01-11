@@ -82,31 +82,38 @@ export const techStack = {
       id: 1,
       src: "/icons/frontend/react.svg",
       alt: "React",
+      span: 1,
     },
     {
       id: 2,
       src: "/icons/frontend/nextjs.svg",
       alt: "Next.js",
+      span: 2,
     },
     {
       id: 3,
       src: "/icons/frontend/css.svg",
       alt: "CSS",
+      span: 2,
+      width: 82,
     },
     {
       id: 4,
       src: "/icons/frontend/html.svg",
       alt: "HTML",
+      span: 1,
     },
     {
       id: 5,
       src: "/icons/frontend/vuejs.svg",
       alt: "Vue JS",
+      span: 1,
     },
     {
       id: 6,
       src: "/icons/frontend/bootstrap.svg",
       alt: "Bootstrap",
+      span: 2,
     },
   ],
   backend: [
@@ -114,46 +121,49 @@ export const techStack = {
       id: 1,
       src: "/icons/backend/nodejs.svg",
       alt: "Node.js",
+      span: 1,
     },
     {
       id: 2,
       src: "/icons/backend/django.svg",
       alt: "Django",
+      span: 2,
     },
     {
       id: 3,
       src: "/icons/backend/fastapi.svg",
       alt: "Fast Api",
+      span: 2,
     },
     {
       id: 4,
       src: "/icons/backend/flask.svg",
       alt: "Flask",
+      span: 1,
     },
     {
       id: 5,
       src: "/icons/backend/python.svg",
       alt: "Python",
+      span: 1,
     },
     {
       id: 6,
       src: "/icons/backend/scrapy.svg",
       alt: "Scrapy",
+      span: 2,
     },
     {
       id: 7,
       src: "/icons/backend/elixir.svg",
       alt: "Elixir",
-    },
-    {
-      id: 8,
-      src: "/icons/backend/selenium.svg",
-      alt: "Selenium",
+      span: 2,
     },
     {
       id: 9,
       src: "/icons/backend/beautifulsoap.svg",
       alt: "Beautiful Soap",
+      span: 1,
     },
   ],
   database: [
@@ -161,31 +171,37 @@ export const techStack = {
       id: 1,
       src: "/icons/database/mysql.svg",
       alt: "MySQL",
+      span: 1,
     },
     {
       id: 2,
       src: "/icons/database/postgresql.svg",
       alt: "PostgreSQL",
+      span: 2,
     },
     {
       id: 3,
       src: "/icons/database/mongodb.svg",
       alt: "MongoDB",
+      span: 2,
     },
     {
       id: 5,
       src: "/icons/database/msql.svg",
       alt: "MSQL",
+      span: 1,
     },
     {
       id: 6,
       src: "/icons/database/redis.svg",
       alt: "Redis",
+      span: 1,
     },
     {
       id: 7,
       src: "/icons/database/couchdb.svg",
       alt: "CouchDB",
+      span: 2,
     },
   ],
   devops: [
@@ -193,46 +209,49 @@ export const techStack = {
       id: 1,
       src: "/icons/devops/git.svg",
       alt: "Git",
+      span: 1,
     },
     {
       id: 2,
       src: "/icons/devops/github.svg",
       alt: "GitHub",
+      span: 2,
     },
     {
       id: 3,
       src: "/icons/devops/travisci.svg",
       alt: "TravisCI",
+      span: 2,
     },
     {
       id: 4,
       src: "/icons/devops/docker.svg",
       alt: "Docker",
+      span: 1,
     },
     {
       id: 5,
       src: "/icons/devops/kubernetes.svg",
       alt: "Kubernetes",
+      span: 1,
     },
     {
       id: 6,
       src: "/icons/devops/openshift.svg",
       alt: "OpenShift",
+      span: 2,
     },
     {
       id: 7,
       src: "/icons/devops/terraform.svg",
       alt: "Terraform",
-    },
-    {
-      id: 8,
-      src: "/icons/devops/aws.svg",
-      alt: "AWS",
+      span: 2,
     },
     {
       id: 9,
       src: "/icons/devops/ubuntu.svg",
       alt: "Ubuntu",
+      span: 1,
     },
   ],
 };
@@ -259,9 +278,13 @@ export interface ImageObject {
   id: number;
   src: string;
   alt: string;
+  span?: number;
+  width?: number;
 }
 export interface ImageObject2 {
   id: number;
   component: React.FC<React.SVGProps<SVGSVGElement>>;
   alt: string;
+  span?: number;
+  width?: number;
 }

@@ -69,14 +69,14 @@ const Navbar = () => {
               state ? "block min-h-[80vh]" : "hidden"
             }`}
           >
-            <ul className="items-center space-y-6 md:flex  md:space-x-6 md:space-y-0">
+            <ul className="items-center space-y-6 md:flex  md:gap-[35px] md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
                   <li key={idx}>
                     {
                       <a
                         href={item.path}
-                        className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[20px]"
+                        className="block text-white text-right text-4xl uppercase font-bold hover:text-yellow md:text-base lg:text-[20px]"
                       >
                         {item.title}
                       </a>

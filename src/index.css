@@ -11,11 +11,14 @@ html {
 *:after {
   box-sizing: inherit;
 }
+body {
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
 
 .animated-text {
   background-image: -webkit-linear-gradient(
-    rgb(255 255 255 / 0.5) 50%,
-    rgb(255 255 255 / 0.5) 50%
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.5) 50%
   );
   background-size: 100% 100%;
   -webkit-text-fill-color: transparent;
@@ -27,7 +30,7 @@ html {
   @for $i from 0 to 50 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgb(255 255 255 / 0.5) calc(100-$(i))%,
+        rgba(255, 255, 255, 0.1) calc(100-$(i))%,
         rgb(207 255 71) $(i)%
       );
     }
@@ -35,7 +38,7 @@ html {
   @for $i from 51 to 100 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgb(255 255 255 / 0.5) calc(100-$(i))%,
+        rgba(255, 255, 255, 0.1) calc(100-$(i))%,
         rgb(207 255 71) calc(100-$(i))%
       );
     }
@@ -78,7 +81,8 @@ html {
 
 .card {
   position: sticky;
-  top: 64px;
+  top: 0;
+  height: 900px;
 }
 
 #card1 {
@@ -148,4 +152,13 @@ h2 {
   display: block;
   height: 100%;
   width: 100%;
+}
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+#pth {
+  animation: anim 5s linear forwards 1s;
 }

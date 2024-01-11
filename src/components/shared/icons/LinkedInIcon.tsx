@@ -7,7 +7,7 @@ const LinkedInIcon = ({ className }: ISVGProps) => {
       xmlns="http://www.w3.org/2000/svg"
       className={`${className}`}
     >
-      <g clip-path="url(#clip0_503_50)">
+      <g clipPath="url(#clip0_503_50)">
         <mask
           id="path-1-outside-1_503_50"
           maskUnits="userSpaceOnUse"

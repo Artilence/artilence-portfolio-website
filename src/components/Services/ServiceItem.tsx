@@ -1,44 +1,57 @@
 import { ImageObject } from "../../constants";
 import Image from "../shared/Image";
-const ServiceItem = ({ title, imageInfo }: IServiceItemProps) => {
+const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
   return (
-    <div
-      className={` max-h-[503px] sm:max-h-[501px]  lg:max-h-[551px] xl:max-h-[706px] flex flex-col xl:flex-row 2xl:min-h-screen`}
-    >
-      <div
-        className={`bg-primary  p-6 xl:flex-1 xl:p-32 xl:flex xl:flex-col xl:justify-center`}
-      >
-        <h4 className={`text-4xl text-white xl:text-8xl`}>{title}</h4>
-        <div className={`h-[8px] w-full bg-yellow xl:h-[16px]`}></div>
-      </div>
-      <div
-        className={`h-[620px] bg-yellow p-6 flex justify-center items-center
-        md:p-10
-          xl:flex-1 xl:h-auto
-
-          `}
-      >
-        <div
-          className={`grid grid-cols-3 gap-x-[72px] gap-y-6
-       md:gap-x-32  
-       lg:gap-y-10
-        `}
-        >
-          {imageInfo.map(({ src, alt, id }) => (
-            <div
-              key={id}
-              className={`animate-bounce original-box-shadow h-[54px] w-[54px] bg-white rounded-full p-2 flex justify-center items-center
-
-             sm:h-[100px] sm:w-[100px] sm:p-5
-              2xl:h-[180px] 2xl:w-[180px] `}
+    <div className={``}>
+      <div className="max-w-[1676px] mx-auto flex flex-col xl:flex-row 2xl:min-h-screen gap-[305px]">
+        <div className={`bg-primary  xl:flex items-center`}>
+          <div>
+            <h4
+              className={`text-white xl:text-[150px] font-light leading-tight`}
             >
-              <Image
-                src={src}
-                alt={alt}
-                className="w-[34px] sm:w-[70px] 2xl:w-[120px]"
-              />
-            </div>
-          ))}
+              {title}
+            </h4>
+            <div
+              className={`h-[8px] bg-yellow xl:h-[11px]
+          ${isInviewport && "animate-expand"}
+        `}
+            ></div>
+          </div>
+        </div>
+        <div
+          className={`flex-1 flex justify-center items-center
+          `}
+        >
+          <div
+            className={`flex-1 grid grid-cols-3 gap-x-[50px] gap-y-6
+        `}
+          >
+            {imageInfo.map(({ src, alt, id, span }) =>
+              span === 2 ? (
+                <div
+                  key={id}
+                  className={`bg-yellow rounded-full py-[18px] px-[74px] flex justify-center items-center col-span-2`}
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    className="w-[34px] 2xl:w-[120px]"
+                  />
+                </div>
+              ) : (
+                <div
+                  key={id}
+                  className={`bg-yellow rounded-full py-[18px] px-[74px] flex justify-center items-center col-span-1`}
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    className="w-[34px] 2xl:w-[120px]"
+                  />
+                </div>
+              )
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -48,6 +61,7 @@ const ServiceItem = ({ title, imageInfo }: IServiceItemProps) => {
 interface IServiceItemProps {
   title: string;
   imageInfo: ImageObject[];
+  isInviewport?: boolean;
 }
 
 export default ServiceItem;

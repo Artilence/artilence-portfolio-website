@@ -11,6 +11,11 @@ export const animations = {
           '50%': { transform: 'scale(4, 4)' },
           'to': { transform: 'scale(10.5,10.5)' }
         },
+        expand: {
+          'from': { width: '0' },
+          '50%': {  width: '50%' },
+          'to': { width: '100%' }
+        },
 
         'grow-circle': {
           'from': { transform: 'scale(0)' },
