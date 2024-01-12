@@ -57,10 +57,10 @@ relative  flex flex-wrap justify-between gap-6 z-0
           ))}
         </div>
         <div
-          className={`flex justify-between  items-end text-white text-[6px] mt-[16px] font-medium tracking-[2.5px]
+          className={`flex justify-between  items-end text-white text-[6px] mt-[16px] font-normal tracking-[2.5px]
      sm:text-[12px] 
      md:text-[16px] md:mt-[32px]
-     lg:text-[25px] lg:mt-[48px] 
+     lg:text-[20px] lg:mt-[48px] 
      xl:mt-[64px]
      2xl:mt-[100px]
 
