@@ -1,6 +1,4 @@
-import FacebookIcon from "../components/shared/icons/FacebookIcon";
-import InstagramIcon from "../components/shared/icons/InstagramIcon";
-import LinkedInIcon from "../components/shared/icons/LinkedInIcon";
+import { FaInstagram, FaFacebook, FaLinkedinIn } from "react-icons/fa6";
 
 export const clientsArray: ImageObject[] = [
   {
@@ -259,17 +257,17 @@ export const techStack = {
 export const socialIcons: ImageObject2[] = [
   {
     id: 1,
-    component: (props) => <FacebookIcon {...props} />,
+    component: (props) => <FaFacebook {...props} />,
     alt: "Facebook",
   },
   {
     id: 2,
-    component: (props) => <InstagramIcon {...props} />,
+    component: (props) => <FaInstagram {...props} />,
     alt: "Instagram",
   },
   {
     id: 3,
-    component: (props) => <LinkedInIcon {...props} />,
+    component: (props) => <FaLinkedinIn {...props} />,
     alt: "Linkedin",
   },
 ];

@@ -38,7 +38,7 @@ theme: {
       'v-tb-scroll-lg': 'v-tb-scroll 3s ease-out forwards 3s',
       'v-bt-scroll-lg':'v-bt-scroll 3s ease-out forwards 3s' ,
       'bounce': 'bounce 3s ease-in-out infinite',
-      'grow-circle': 'grow-circle 0.3s ease-in forwards',
+      'grow-circle': 'grow-circle 0.5s ease-out forwards',
       'expand': 'expand 3s ease-in forwards',
       'expand-image': 'expand-image 1s linear forwards',
     },
