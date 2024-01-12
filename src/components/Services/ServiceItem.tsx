@@ -32,22 +32,14 @@ const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
                   key={id}
                   className={`bg-yellow rounded-full py-[18px] px-[74px] flex justify-center items-center col-span-2`}
                 >
-                  <Image
-                    src={src}
-                    alt={alt}
-                    className="w-[34px] 2xl:w-[120px]"
-                  />
+                  <Image src={src} alt={alt} />
                 </div>
               ) : (
                 <div
                   key={id}
                   className={`bg-yellow rounded-full py-[18px] px-[74px] flex justify-center items-center col-span-1`}
                 >
-                  <Image
-                    src={src}
-                    alt={alt}
-                    className="w-[34px] 2xl:w-[120px]"
-                  />
+                  <Image src={src} alt={alt} className="h-[61px]" />
                 </div>
               )
             )}
