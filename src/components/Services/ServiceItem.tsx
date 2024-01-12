@@ -1,4 +1,5 @@
 import { ImageObject } from "../../constants";
+import AnimatedBar from "../shared/AnimatedBar";
 import Image from "../shared/Image";
 const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
   return (
@@ -11,11 +12,7 @@ const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
             >
               {title}
             </h4>
-            <div
-              className={`h-[8px] bg-yellow xl:h-[11px]
-          ${isInviewport && "animate-expand"}
-        `}
-            ></div>
+            <AnimatedBar isInviewport={isInviewport || false} />
           </div>
         </div>
         <div

@@ -7,18 +7,18 @@ const Input = ({
   return (
     <div
       className={`
-    flex flex-col text-[5px]
+    flex flex-col text-[5px] gap-[16px]
     sm:text-[8px]
-    mb-4 md:text-lg md:p-5 md:mb-0
-    xl:text-xl xl:mb-8
-    2xl:text-2xl
+    mb-4 md:text-lg 
+    xl:text-xl 
+    2xl:text-[25px]
     ${className}
     `}
     >
       <label>{label}</label>
       <input
         type={type}
-        className="border-gray border-b py-2 md:border-b-2"
+        className="border-gray border-b py-2 md:border-b-2 text-[19px]"
         placeholder={placeholder}
       />
     </div>

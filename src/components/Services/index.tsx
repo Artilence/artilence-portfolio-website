@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { techStack } from "../../constants";
 import ServiceItem from "./ServiceItem";
 import useIsInViewport from "../../hooks/useIsInViewport";
+import AnimatedBar from "../shared/AnimatedBar";
 
 const Services = () => {
   const mainSlideRef = useRef<HTMLDivElement>(null);
@@ -51,16 +52,15 @@ const Services = () => {
                     <div>we</div>
                     <div>do</div>
                   </div>
-                  <div
-                    className={`
-          h-[5px] bg-yellow max-w-[500px]
-          mt-5
-          lg:h-[10px]
-          relative -top-5
-          ${isMainSlideInViewport && "animate-expand"}
 
+                  <AnimatedBar
+                    isInviewport={isMainSlideInViewport || false}
+                    className={`
+          max-w-[500px]
+          mt-5
+          relative -top-5
           `}
-                  ></div>
+                  />
                 </div>
                 <div
                   className={`

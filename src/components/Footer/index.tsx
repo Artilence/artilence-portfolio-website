@@ -28,7 +28,7 @@ relative  flex flex-wrap justify-between gap-6 z-0
            md:w-[170px] md:h-[170px]  
            lg:w-[220px] lg:h-[220px] lg:border-2
            xl:w-[200px] xl:h-[200px]
-           2xl:w-[350px] 2xl:h-[350px] 2xl:border-4
+           2xl:w-[350px] 2xl:h-[350px] 2xl:border-[5px]
 
             `}
             >
@@ -39,7 +39,7 @@ relative  flex flex-wrap justify-between gap-6 z-0
                  md:h-[70px] md:w-[70px]
                  lg:h-[100px] lg:w-[100px]
                  xl:h-[100px] xl:w-[100px]
-                 2xl:h-[200px] 2xl:w-[200px]
+                 2xl:h-[156px] 2xl:w-[156px]
                   `,
                 })}
               </div>
@@ -57,10 +57,10 @@ relative  flex flex-wrap justify-between gap-6 z-0
           ))}
         </div>
         <div
-          className={`flex justify-between  items-end text-white text-[6px] mt-[16px] font-light
+          className={`flex justify-between  items-end text-white text-[6px] mt-[16px] font-medium tracking-[2.5px]
      sm:text-[12px] 
      md:text-[16px] md:mt-[32px]
-     lg:text-[20px] lg:mt-[48px]
+     lg:text-[25px] lg:mt-[48px] 
      xl:mt-[64px]
      2xl:mt-[100px]
 
