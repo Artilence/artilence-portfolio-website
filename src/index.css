@@ -30,16 +30,16 @@ body {
   @for $i from 0 to 50 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.1) calc(100-$(i)) %,
-        rgb(207 255 71) $(i) %
+        rgba(255, 255, 255, 0.1) calc(100-$(i))%,
+        rgb(207 255 71) $(i)%
       );
     }
   }
   @for $i from 51 to 100 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.1) calc(100-$(i)) %,
-        rgb(207 255 71) calc(100-$(i)) %
+        rgba(255, 255, 255, 0.1) calc(100-$(i))%,
+        rgb(207 255 71) calc(100-$(i))%
       );
     }
   }
