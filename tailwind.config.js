@@ -29,7 +29,7 @@ theme: {
       'frontend-back': 'back 0.8s forwards ease-out 1s',
       'database-forward': 'back 0.8s forwards ease-out 2s',
       'devops-forward': 'back 0.8s forwards ease-out 2.5s',
-      'fade-in': 'fade_in 2s forwards',
+      'fade-in': 'fade_in 2s forwards 0.8s',
       'fade-out': 'fade_out 0.3s forwards',
       'fade-out-rev': 'fade_out 0.3s reverse forwards',
       'fill-text': 'fillText 0.8s forwards',
@@ -40,6 +40,7 @@ theme: {
       'bounce': 'bounce 3s ease-in-out infinite',
       'grow-circle': 'grow-circle 0.3s ease-in forwards',
       'expand': 'expand 3s ease-in forwards',
+      'expand-image': 'expand-image 1s linear forwards',
     },
     fontFamily: {
       'sans': ['Helvetica',]

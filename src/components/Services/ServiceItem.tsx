@@ -28,19 +28,37 @@ const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
           >
             {imageInfo.map(({ src, alt, id, span }) =>
               span === 2 ? (
-                <div
-                  key={id}
-                  className={`bg-yellow rounded-full py-[18px] px-[74px] flex justify-center items-center col-span-2`}
-                >
-                  <Image src={src} alt={alt} />
-                </div>
+                <>
+                  {isInviewport && (
+                    <div className="col-span-2 relative" key={id}>
+                      <div
+                        className={`w-0 h-[137px] bg-yellow rounded-full flex justify-center items-center animate-expand-image absolute right-0`}
+                      >
+                        <Image
+                          src={src}
+                          alt={alt}
+                          className="animate-fade-in opacity-0"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </>
               ) : (
-                <div
-                  key={id}
-                  className={`bg-yellow rounded-full py-[18px] px-[74px] flex justify-center items-center col-span-1`}
-                >
-                  <Image src={src} alt={alt} className="h-[61px]" />
-                </div>
+                <>
+                  {isInviewport && (
+                    <div className="col-span-1 relative" key={id}>
+                      <div
+                        className={`w-0 h-[137px] bg-yellow rounded-full flex justify-center items-center col-span-1 animate-expand-image relative right-0`}
+                      >
+                        <Image
+                          src={src}
+                          alt={alt}
+                          className="animate-fade-in opacity-0"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </>
               )
             )}
           </div>

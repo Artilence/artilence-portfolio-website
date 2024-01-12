@@ -17,6 +17,11 @@ export const animations = {
           'to': { width: '100%' }
         },
 
+        'expand-image': {
+          'from': { width: '0', opacity: '0' },
+          '50%': {  width: '50%', opacity: '0.5' },
+          'to': { width: '100%', opacity: '1', padding: '10px 30px' }
+        },
         'grow-circle': {
           'from': { transform: 'scale(0)' },
           'to': { transform: 'scale(1)' }
