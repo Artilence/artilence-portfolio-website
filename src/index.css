@@ -45,6 +45,7 @@ body {
   }
 }
 
+
 :root {
   --cards: 4;
   --cardHeight: 63vh;
@@ -81,7 +82,7 @@ body {
 
 .card {
   position: sticky;
-  top: 0;
+  top: 12px;
   height: 100vh;
 }
 

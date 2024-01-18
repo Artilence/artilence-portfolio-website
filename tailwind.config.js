@@ -15,7 +15,7 @@ theme: {
       keyframes: animations 
     },
     animation: {
-      'move': 'move 2s linear infinite',
+      'move-to-center': 'move-to-center 10s ease-in  6.2s forwards',
       'gelatine': 'gelatine 1s infinite',
       'grow': 'grow 0.5s forwards linear 2s, big_screen_start 2s forwards linear 2.5s, big_screen_end 3.5s forwards linear 3s',
       'vertical-up': 'vertical_up 4s forwards ',
@@ -29,7 +29,7 @@ theme: {
       'frontend-back': 'back 0.8s forwards ease-out 1s',
       'database-forward': 'back 0.8s forwards ease-out 2s',
       'devops-forward': 'back 0.8s forwards ease-out 2.5s',
-      'fade-in': 'fade_in 2s forwards 0.8s',
+      'fade-in': 'fade_in 2s forwards 1.8s',
       'fade-out': 'fade_out 0.3s forwards',
       'fade-out-rev': 'fade_out 0.3s reverse forwards',
       'fill-text': 'fillText 0.8s forwards',
@@ -40,7 +40,9 @@ theme: {
       'bounce': 'bounce 3s ease-in-out infinite',
       'grow-circle': 'grow-circle 0.5s ease-out forwards',
       'expand': 'expand 3s ease-in forwards',
-      'expand-image': 'expand-image 1s linear forwards',
+      'expand-image': 'expand-image 1s linear forwards 1s',
+'move-backwards': 'move-backwards 3s ease-in forwards 12s',
+// 'move-backwards-reverse': 'move-backwards 3s ease-in reverse forwards 12s',
     },
     fontFamily: {
       'sans': ['Helvetica',]

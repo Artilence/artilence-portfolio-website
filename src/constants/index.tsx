@@ -1,4 +1,5 @@
 import { FaInstagram, FaFacebook, FaLinkedinIn } from "react-icons/fa6";
+import getUuid from "uuid-by-string";
 
 export const clientsArray: ImageObject[] = [
   {
@@ -270,6 +271,113 @@ export const socialIcons: ImageObject2[] = [
     component: (props) => <FaLinkedinIn {...props} />,
     alt: "Linkedin",
   },
+];
+
+export const shells = [
+  [
+    {
+      src: "textures/react.png",
+      id: getUuid("textures/react.png"),
+      name: "Reactjs",
+    },
+    {
+      src: "textures/nextjs.png",
+      id: getUuid("textures/nextjs.svg"),
+      name: "Nextjs",
+    },
+    {
+      src: "textures/html.png",
+      id: getUuid("textures/html.png"),
+      name: "HTML5",
+    },
+    {
+      src: "textures/css.png",
+      id: getUuid("textures/css.png"),
+      name: "CSS3",
+    },
+    {
+      src: "textures/bootstrap.png",
+      id: getUuid("textures/bootstrap.png"),
+      name: "Bootstrap",
+    },
+
+    {
+      src: "textures/vuejs.png",
+      id: getUuid("textures/vuejs.png"),
+      name: "Vuejs",
+    },
+  ],
+  [
+    {
+      src: "textures/django.png",
+      id: getUuid("textures/django.png"),
+      name: "Django",
+    },
+    {
+      src: "textures/fastapi.png",
+      id: getUuid("textures/fastapi.png"),
+      name: "Fastapi",
+    },
+    {
+      src: "textures/nodejs.png",
+      id: getUuid("textures/nodejs.png"),
+      name: "Nodejs",
+    },
+    {
+      src: "textures/scrapy.png",
+      id: getUuid("textures/scrapy.png"),
+      name: "Scrapy",
+    },
+    {
+      src: "textures/python.png",
+      id: getUuid("textures/python.png"),
+      name: "Python",
+    },
+    {
+      src: "textures/flask.png",
+      id: getUuid("textures/flask.png"),
+      name: "Flask",
+    },
+
+    {
+      src: "textures/elixir.png",
+      id: getUuid("textures/elixir.png"),
+      name: "Elixir",
+    },
+  ],
+
+  [
+    {
+      src: "textures/mysql.png",
+      id: getUuid("textures/mysql.png"),
+      name: "mysql",
+    },
+    {
+      src: "textures/msql.png",
+      id: getUuid("textures/msql.png"),
+      name: "msql",
+    },
+    {
+      src: "textures/postgresql.png",
+      id: getUuid("textures/postgresql.png"),
+      name: "postgresql",
+    },
+    {
+      src: "textures/mongodb.svg",
+      id: getUuid("textures/mongodb.png"),
+      name: "mongodb",
+    },
+    {
+      src: "textures/redis.png",
+      id: getUuid("textures/redis.png"),
+      name: "redis",
+    },
+    {
+      src: "textures/couchdb.png",
+      id: getUuid("textures/couchdb.png"),
+      name: "couchdb",
+    },
+  ],
 ];
 
 export interface ImageObject {

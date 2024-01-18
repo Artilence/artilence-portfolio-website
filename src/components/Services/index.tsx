@@ -13,9 +13,9 @@ const Services = () => {
   const isMainSlideInViewport = useIsInViewport(mainSlideRef);
 
   return (
-    <div>
-      <ul id="cards ">
-        <li className="card">
+    <div className="bg-primary">
+      <ul id="cards">
+        <li className="card ">
           <div className="card-body">
             <div
               className={`

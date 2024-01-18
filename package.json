@@ -10,7 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/cannon": "^6.6.0",
+    "@react-three/drei": "^9.93.1",
+    "@react-three/fiber": "^8.15.14",
+    "@types/three": "^0.160.0",
     "add": "^2.0.6",
+    "maath": "^0.10.7",
     "postcss-calc": "^9.0.1",
     "postcss-conditionals": "^2.1.0",
     "postcss-for": "^2.1.1",
@@ -20,6 +25,8 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.21.0",
     "swiper": "^11.0.5",
+    "three": "^0.160.0",
+    "uuid-by-string": "^4.0.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
