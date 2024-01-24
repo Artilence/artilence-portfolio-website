@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.0",
+    "@react-spring/three": "^9.7.3",
     "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^9.93.1",
     "@react-three/fiber": "^8.15.14",
     "@types/three": "^0.160.0",
     "add": "^2.0.6",
+    "gsap": "^3.12.5",
     "maath": "^0.10.7",
     "postcss-calc": "^9.0.1",
     "postcss-conditionals": "^2.1.0",

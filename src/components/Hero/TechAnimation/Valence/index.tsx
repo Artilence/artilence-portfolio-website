@@ -1,9 +1,9 @@
-import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { Group } from "three";
 import Torus from "../Torus";
 import Sphere from "../Sphere";
 import { Colors } from "..";
+import { useFrame } from "@react-three/fiber";
 
 interface ValenceProps {
   ringNumber: number;
@@ -23,14 +23,14 @@ const Valence: React.FC<ValenceProps> = ({
 
   const baseRadius = width > height ? height - 40 / 2 : width - 40 / 2;
   const radius = 50 + (baseRadius / 30) * ringNumber;
-  const baseRotation = 0.003;
+  const baseRotation = 0.005;
 
   const groupRef = useRef<Group>(null!);
 
   useFrame(() => {
     if (groupRef.current && isAnimationRunning) {
-      groupRef.current.rotation.x += baseRotation - ringNumber * 0.001;
-      groupRef.current.rotation.y += baseRotation - ringNumber * 0.001;
+      // groupRef.current.rotation.x += baseRotation - ringNumber * 0.001;
+      // groupRef.current.rotation.y += baseRotation - ringNumber * 0.001;
       groupRef.current.rotation.z += baseRotation - ringNumber * 0.001;
     }
   });
@@ -39,32 +39,32 @@ const Valence: React.FC<ValenceProps> = ({
     <group ref={groupRef}>
       <Torus
         radius={radius}
-        tubeDiameter={0.2}
+        tubeDiameter={0.4}
         radialSegments={20}
         tubularSegments={100}
         arc={Math.PI * 2}
         color={`${Colors.gray}`}
         rotationX={0}
       />
-
-      {item.map(({ src, id, name }, i) => {
-        const angleIncrement = (Math.PI * 2) / item.length;
-        const angle = i * angleIncrement;
-        const posX = radius * Math.cos(angle);
-        const posY = radius * Math.sin(angle);
-        return (
-          <Sphere
-            key={id}
-            x={posX}
-            y={posY}
-            id={id}
-            src={src}
-            name={name}
-            color={Colors.yellow}
-            setIsAnimationRunning={setIsAnimationRunning}
-          />
-        );
-      })}
+      <group rotation={[0, 0, Math.PI / 4]}>
+        {item.map(({ src, id, name }, i) => {
+          const angleIncrement = (Math.PI * 2) / item.length;
+          const angle = i * angleIncrement;
+          const posX = radius * Math.cos(angle);
+          const posY = radius * Math.sin(angle);
+          return (
+            <Sphere
+              key={id}
+              x={posX}
+              y={posY}
+              id={id}
+              src={src}
+              name={name}
+              setIsAnimationRunning={setIsAnimationRunning}
+            />
+          );
+        })}
+      </group>
     </group>
   );
 };

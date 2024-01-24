@@ -276,6 +276,80 @@ export const socialIcons: ImageObject2[] = [
 export const shells = [
   [
     {
+      src: "textures/git.png",
+      id: getUuid("textures/git.png"),
+      name: "Git",
+    },
+    {
+      src: "textures/kubernetes.png",
+      id: getUuid("textures/kubernetes.png"),
+      name: "Kubernetes",
+    },
+    {
+      src: "textures/travisci.png",
+      id: getUuid("textures/travisci.png"),
+      name: "Travis CI",
+    },
+    {
+      src: "textures/docker.png",
+      id: getUuid("textures/docker.png"),
+      name: "Docker",
+    },
+    {
+      src: "textures/github.png",
+      id: getUuid("textures/github.png"),
+      name: "GitHub",
+    },
+    {
+      src: "textures/terraform.png",
+      id: getUuid("textures/terraform.png"),
+      name: "Terraform",
+    },
+    {
+      src: "textures/ubuntu.png",
+      id: getUuid("textures/ubuntu.png"),
+      name: "Ubuntu",
+    },
+    {
+      src: "textures/openshift.png",
+      id: getUuid("textures/openshift.png"),
+      name: "Openshift",
+    },
+  ],
+  [
+    {
+      src: "textures/mysql.png",
+      id: getUuid("textures/mysql.png"),
+      name: "mysql",
+    },
+    {
+      src: "textures/msql.png",
+      id: getUuid("textures/msql.png"),
+      name: "msql",
+    },
+    {
+      src: "textures/postgresql.png",
+      id: getUuid("textures/postgresql.png"),
+      name: "postgresql",
+    },
+    {
+      src: "textures/mongodb.png",
+      id: getUuid("textures/mongodb.png"),
+      name: "mongodb",
+    },
+    {
+      src: "textures/redis.png",
+      id: getUuid("textures/redis.png"),
+      name: "redis",
+    },
+    {
+      src: "textures/couchdb.png",
+      id: getUuid("textures/couchdb.png"),
+      name: "couchdb",
+    },
+  ],
+  [
+    {
       src: "textures/react.png",
       id: getUuid("textures/react.png"),
       name: "Reactjs",
@@ -329,6 +403,11 @@ export const shells = [
       name: "Scrapy",
     },
     {
+      src: "textures/beautifulsoap.png",
+      id: getUuid("textures/beautifulsoap.png"),
+      name: "Beautifulsoap",
+    },
+    {
       src: "textures/python.png",
       id: getUuid("textures/python.png"),
       name: "Python",
@@ -343,39 +422,6 @@ export const shells = [
       src: "textures/elixir.png",
       id: getUuid("textures/elixir.png"),
       name: "Elixir",
-    },
-  ],
-
-  [
-    {
-      src: "textures/mysql.png",
-      id: getUuid("textures/mysql.png"),
-      name: "mysql",
-    },
-    {
-      src: "textures/msql.png",
-      id: getUuid("textures/msql.png"),
-      name: "msql",
-    },
-    {
-      src: "textures/postgresql.png",
-      id: getUuid("textures/postgresql.png"),
-      name: "postgresql",
-    },
-    {
-      src: "textures/mongodb.svg",
-      id: getUuid("textures/mongodb.png"),
-      name: "mongodb",
-    },
-    {
-      src: "textures/redis.png",
-      id: getUuid("textures/redis.png"),
-      name: "redis",
-    },
-    {
-      src: "textures/couchdb.png",
-      id: getUuid("textures/couchdb.png"),
-      name: "couchdb",
     },
   ],
 ];
