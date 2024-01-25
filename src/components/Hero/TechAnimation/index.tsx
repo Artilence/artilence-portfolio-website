@@ -16,9 +16,9 @@ export var Colors = {
 };
 
 const TechAnimation = () => {
-  const [isAnimationRunning, setIsAnimationRunning] = useState(true);
+  const [isAnimationRunning, setIsAnimationRunning] = useState(false);
   return (
-    <div className="w-screen h-screen bg-primary world-3d">
+    <div className="w-screen h-screen bg-primary world-3d py-16 mt-16">
       <Canvas
         shadows
         camera={{
@@ -43,7 +43,7 @@ const TechAnimation = () => {
           isAnimationRunning={isAnimationRunning}
           setIsAnimationRunning={setIsAnimationRunning}
         />
-        {/* <axesHelper args={[500]} /> */}
+        <axesHelper args={[500]} />
       </Canvas>
     </div>
   );

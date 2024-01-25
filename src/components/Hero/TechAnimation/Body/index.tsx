@@ -28,9 +28,15 @@ const Body: React.FC<IAnimationBodyProps> = ({
     const rotationTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".world-3d",
-        start: "top top",
-        end: "center 100%",
+        start: "-40% top",
+        end: "bottom 100%",
         scrub: 5,
+        markers: {
+          startColor: "black",
+          endColor: "red",
+          fontSize: "24px",
+          indent: 2,
+        },
         toggleActions: "play pause reverse pause",
         onEnter: function () {
           console.log("Play Animation");
@@ -44,7 +50,7 @@ const Body: React.FC<IAnimationBodyProps> = ({
         y: -Math.PI / 4,
       },
       {
-        duration: 5,
+        duration: 1,
         y: 0,
         ease: "power1.inOut",
       }
@@ -56,10 +62,13 @@ const Body: React.FC<IAnimationBodyProps> = ({
       <group
         onClick={(e: ThreeEvent<MouseEvent>) => (
           // @ts-ignore
-          e.stopPropagation(), navigate(e.object ? "/" : "/" + e.object?.name)
+          e.stopPropagation(),
+          e.object ? navigate("/" + e.object.name) : navigate("/"),
+          setIsAnimationRunning(false)
+          // console.log(e.object)
         )}
         ref={groupRef}
-        onPointerMissed={() => navigate("/")}
+        onPointerMissed={() => (navigate("/"), setIsAnimationRunning(true))}
       >
         <Sphere r={25} setIsAnimationRunning={setIsAnimationRunning} />
         {Array.from({ length: shells.length }, (_, index) => index + 1).map(

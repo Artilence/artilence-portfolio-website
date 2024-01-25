@@ -13,6 +13,7 @@ import {
   Vector2,
 } from "three";
 import { Colors } from "..";
+import Image from "../../../shared/Image";
 
 interface SphereProps {
   x?: number;
@@ -31,7 +32,7 @@ const Sphere: React.FC<SphereProps> = ({
   id,
   src,
   name,
-  setIsAnimationRunning,
+  // setIsAnimationRunning,
 }) => {
   const colorMap = useTexture(src || "artilencelogo.png");
   colorMap.center = new Vector2(0.5, 0.5);
@@ -39,6 +40,7 @@ const Sphere: React.FC<SphereProps> = ({
   const [hovered, setHovered] = useState(false);
   const { id: selectedId } = useParams();
   const sphereRef = useRef<Group<Object3DEventMap> | null>(null!);
+  // const { navigate } = useNavigate();
 
   const [ref, api] = useSphere(() => ({
     mass: 1,
@@ -63,11 +65,11 @@ const Sphere: React.FC<SphereProps> = ({
             >
           >
         }
-        onPointerOver={(e) => (
-          e.stopPropagation(), setIsAnimationRunning(false), setHovered(true)
-        )}
-        onPointerOut={() => (setHovered(false), setIsAnimationRunning(true))}
+        onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
+        onPointerOut={() => setHovered(false)}
         name={id}
+        onClick={(e) => console.log(e.object.position)}
+        // onPointerMissed={(e) => e.button === 0 && (navigate("/"), setHovered(false), setIsAnimationRunning(true))}
       >
         <sphereGeometry args={[r, 50, 50]} />
         <meshPhongMaterial color={Colors.white} opacity={1.0} map={colorMap} />
@@ -75,11 +77,16 @@ const Sphere: React.FC<SphereProps> = ({
           <Html
             distanceFactor={1}
             style={{
-              transform: "translate(16%, 16%)",
-              backgroundImage: `url("icons/frontend/react.svg")`,
+              transform: "translateX(-100%) translateY(0%)",
+              position: "relative",
             }}
           >
-            <div className="text-sm text-yellow">{name}</div>
+            <div className="text-primary text-xs absolute z-10 top-3 left-3">
+              {name}
+            </div>
+            <div className="relative top-0 right-0 ">
+              <Image src="/ldialog.svg" width={200} height={200} alt="popup" />
+            </div>
           </Html>
         )}
       </mesh>
