@@ -17,7 +17,7 @@ const QuestionMark = ({ color }: IQuestionMark) => {
         />
       </svg>
       <div
-        className={`relative left-[71px] top-[20px] w-16 h-16 bg-[#FFFFFF]/50 rounded-full ${
+        className={`relative left-[70px] top-[18px] w-16 h-16 bg-[#FFFFFF]/50 rounded-full ${
           color && "bg-yellow"
         }`}
       ></div>

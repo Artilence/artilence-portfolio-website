@@ -26,9 +26,15 @@ const ScrollRoutine = () => {
   return (
     <>
       <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white font-light relative top-0 ">
-        <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden gap-2 ">
-          <div className="hide-text" ref={textRef}>
-            finding tech
+        <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden">
+          <div className="hide-text tracking-wide flex" ref={textRef}>
+            {"finding".split("").map((letter, index) => (
+              <div key={index}>{letter}</div>
+            ))}
+
+            {"tech".split("").map((letter, index) => (
+              <div key={index}>{letter}</div>
+            ))}
           </div>
         </div>
       </div>

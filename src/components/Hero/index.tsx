@@ -35,39 +35,38 @@ const Hero = () => {
           ) : (
             <>
               <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white font-light  ">
-                <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden gap-2">
+                <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden tracking-wide">
                   {"finding".split("").map((letter, index) =>
                     index % 2 === 0 ? (
                       <div
                         key={index}
-                        className="-translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll"
+                        className="-translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll tracking-wide"
                       >
                         {generateRandomArray(letter)}
                       </div>
                     ) : (
                       <div
                         key={index}
-                        className="translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll"
+                        className="translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll tracking-wide"
                       >
                         {generateRandomArray(letter)}
                       </div>
                     )
-                  )}
-                  <span className="w-[16px] hidden md:block"></span>
+                  )}{" "}
                 </div>
-                <div className="flex items-center justify-end h-[70px] sm:h-[105px]  lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden gap-2">
+                <div className="flex items-center justify-end h-[70px] sm:h-[105px]  lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden">
                   {"tech".split("").map((letter, index) =>
                     index % 2 === 0 ? (
                       <div
                         key={index}
-                        className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll"
+                        className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll tracking-wide"
                       >
                         {generateRandomArray(letter)}
                       </div>
                     ) : (
                       <div
                         key={index}
-                        className="translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll"
+                        className="translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll tracking-wide"
                       >
                         {generateRandomArray(letter)}
                       </div>
@@ -115,8 +114,6 @@ const Hero = () => {
               </div>
             </>
           )}
-          {/*  */}
-          {/*  */}
         </div>
       </div>
 
