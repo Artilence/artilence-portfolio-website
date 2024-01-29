@@ -7,6 +7,9 @@ export default {
   ],
 theme: {
     extend: {
+fontFamily: {
+        primary: "Data Seventy Std",
+      },
       colors: {
         'primary': '#06C996',
         'yellow': '#CFFF47',
@@ -29,7 +32,7 @@ theme: {
       'frontend-back': 'back 0.8s forwards ease-out 1s',
       'database-forward': 'back 0.8s forwards ease-out 2s',
       'devops-forward': 'back 0.8s forwards ease-out 2.5s',
-      'fade-in': 'fade_in 2s forwards 1.8s',
+      'fade-in': 'fade_in 0.5s forwards',
       'fade-out': 'fade_out 0.3s forwards',
       'fade-out-rev': 'fade_out 0.3s reverse forwards',
       'fill-text': 'fillText 0.8s forwards',

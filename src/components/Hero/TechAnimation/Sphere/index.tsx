@@ -1,5 +1,5 @@
 import { useSphere } from "@react-three/cannon";
-import { Html, useCursor, useTexture } from "@react-three/drei";
+import { useCursor, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { RefObject, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -12,7 +12,6 @@ import {
   Vector2,
 } from "three";
 import { Colors } from "..";
-import Image from "../../../shared/Image";
 
 interface SphereProps {
   x?: number;
@@ -30,7 +29,6 @@ const Sphere: React.FC<SphereProps> = ({
   r = 10,
   id,
   src,
-  name,
   setIsAnimationRunning,
 }) => {
   const colorMap = useTexture(src || "artilencelogo.png");
@@ -76,28 +74,11 @@ const Sphere: React.FC<SphereProps> = ({
       // onPointerMissed={(e) => e.button === 0 && (navigate("/"), setHovered(false), setIsAnimationRunning(true))}
     >
       <sphereGeometry args={[r, 50, 50]} />
-      <meshStandardMaterial
+      <meshPhongMaterial
         opacity={1.0}
         map={colorMap}
         color={hovered ? Colors.primary : Colors.white}
       />
-      {name && hovered && (
-        <Html
-          distanceFactor={1}
-          style={{
-            transform: "translateX(-100%) translateY(10%)",
-            position: "relative",
-            backgroundColor: "red",
-          }}
-        >
-          <div className="text-primary text-xs absolute z-10 top-3 left-3">
-            {name}
-          </div>
-          <div className="relative top-0 right-0 ">
-            <Image src="/ldialog.svg" width={200} height={200} alt="popup" />
-          </div>
-        </Html>
-      )}
     </mesh>
   );
 };

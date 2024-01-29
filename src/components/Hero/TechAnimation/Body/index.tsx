@@ -27,18 +27,18 @@ const Body: React.FC<IAnimationBodyProps> = ({
     const rotationTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".world-3d",
-        start: "-40% top",
+        start: "-70% top",
         end: "bottom 100%",
         scrub: 5,
-        markers: {
-          startColor: "black",
-          endColor: "red",
-          fontSize: "24px",
-          indent: 2,
-        },
+        // markers: {
+        //   startColor: "black",
+        //   endColor: "red",
+        //   fontSize: "24px",
+        //   indent: 2,
+        // },
         toggleActions: "play pause reverse pause",
         onEnter: function () {
-          console.log("Play Animation");
+          // console.log("Play Animation");
         },
       },
     });
@@ -46,7 +46,7 @@ const Body: React.FC<IAnimationBodyProps> = ({
     rotationTimeline.fromTo(
       groupRef.current.rotation,
       {
-        y: -Math.PI / 4,
+        y: -Math.PI / 5,
       },
       {
         duration: 1,
