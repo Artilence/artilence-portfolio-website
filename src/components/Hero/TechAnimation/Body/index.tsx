@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { shells } from "../../../../constants";
 import Valence from "../Valence";
 import Sphere from "../Sphere";
-import { ThreeEvent } from "@react-three/fiber";
 import { useRef } from "react";
 import { Group } from "three";
 import { useGSAP } from "@gsap/react";
@@ -60,17 +59,17 @@ const Body: React.FC<IAnimationBodyProps> = ({
   return (
     <Physics gravity={[0, 0, 0]}>
       <group
-        onClick={(e: ThreeEvent<MouseEvent>) => (
-          // @ts-ignore
-          e.stopPropagation(),
-          e.object ? navigate("/" + e.object.name) : navigate("/"),
-          setIsAnimationRunning(false)
-          // console.log(e.object)
-        )}
+        // onClick={(e: ThreeEvent<MouseEvent>) => (
+        // @ts-ignore
+        // e.stopPropagation(),
+        // e.object ? navigate("/" + e.object.name) : navigate("/"),
+        // setIsAnimationRunning(false)
+        // console.log(e.object)
+        // )}
         ref={groupRef}
         onPointerMissed={() => (navigate("/"), setIsAnimationRunning(true))}
       >
-        <Sphere r={25} setIsAnimationRunning={setIsAnimationRunning} />
+        <Sphere r={30} setIsAnimationRunning={setIsAnimationRunning} />
         {Array.from({ length: shells.length }, (_, index) => index + 1).map(
           (i) => {
             var shellCountIndex = (i - 1) % shells.length;

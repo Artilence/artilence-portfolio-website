@@ -1,11 +1,10 @@
 import { useSphere } from "@react-three/cannon";
 import { Html, useCursor, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { RefObject, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { RefObject, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   BufferGeometry,
-  Group,
   Material,
   Mesh,
   NormalBufferAttributes,
@@ -28,19 +27,18 @@ interface SphereProps {
 const Sphere: React.FC<SphereProps> = ({
   x = 0,
   y = 0,
-  r = 12,
+  r = 10,
   id,
   src,
   name,
-  // setIsAnimationRunning,
+  setIsAnimationRunning,
 }) => {
   const colorMap = useTexture(src || "artilencelogo.png");
   colorMap.center = new Vector2(0.5, 0.5);
 
   const [hovered, setHovered] = useState(false);
-  const { id: selectedId } = useParams();
-  const sphereRef = useRef<Group<Object3DEventMap> | null>(null!);
-  // const { navigate } = useNavigate();
+  // const { id: selectedId } = useParams();
+  const navigate = useNavigate();
 
   const [ref, api] = useSphere(() => ({
     mass: 1,
@@ -48,49 +46,59 @@ const Sphere: React.FC<SphereProps> = ({
     args: [r],
   }));
   useFrame(() => {
-    api.rotation.set(1, 0, 0);
+    api.rotation.set(1.2, 0, 0);
   });
 
   useCursor(hovered);
   return (
-    <group ref={sphereRef}>
-      <mesh
-        receiveShadow
-        ref={
-          ref as RefObject<
-            Mesh<
-              BufferGeometry<NormalBufferAttributes>,
-              Material | Material[],
-              Object3DEventMap
-            >
+    <mesh
+      receiveShadow
+      ref={
+        ref as RefObject<
+          Mesh<
+            BufferGeometry<NormalBufferAttributes>,
+            Material | Material[],
+            Object3DEventMap
           >
-        }
-        onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
-        onPointerOut={() => setHovered(false)}
-        name={id}
-        onClick={(e) => console.log(e.object.position)}
-        // onPointerMissed={(e) => e.button === 0 && (navigate("/"), setHovered(false), setIsAnimationRunning(true))}
-      >
-        <sphereGeometry args={[r, 50, 50]} />
-        <meshPhongMaterial color={Colors.white} opacity={1.0} map={colorMap} />
-        {name && selectedId === id && (
-          <Html
-            distanceFactor={1}
-            style={{
-              transform: "translateX(-100%) translateY(0%)",
-              position: "relative",
-            }}
-          >
-            <div className="text-primary text-xs absolute z-10 top-3 left-3">
-              {name}
-            </div>
-            <div className="relative top-0 right-0 ">
-              <Image src="/ldialog.svg" width={200} height={200} alt="popup" />
-            </div>
-          </Html>
-        )}
-      </mesh>
-    </group>
+        >
+      }
+      onPointerEnter={(e) => (
+        e.stopPropagation(),
+        setHovered(true),
+        e.object ? navigate("/" + e.object.name) : navigate("/"),
+        setIsAnimationRunning(false)
+      )}
+      onPointerLeave={() => (
+        setHovered(false), navigate("/"), setIsAnimationRunning(true)
+      )}
+      name={id}
+      // onClick={(e) => console.log(e.object.position)}
+      // onPointerMissed={(e) => e.button === 0 && (navigate("/"), setHovered(false), setIsAnimationRunning(true))}
+    >
+      <sphereGeometry args={[r, 50, 50]} />
+      <meshStandardMaterial
+        opacity={1.0}
+        map={colorMap}
+        color={hovered ? Colors.primary : Colors.white}
+      />
+      {name && hovered && (
+        <Html
+          distanceFactor={1}
+          style={{
+            transform: "translateX(-100%) translateY(10%)",
+            position: "relative",
+            backgroundColor: "red",
+          }}
+        >
+          <div className="text-primary text-xs absolute z-10 top-3 left-3">
+            {name}
+          </div>
+          <div className="relative top-0 right-0 ">
+            <Image src="/ldialog.svg" width={200} height={200} alt="popup" />
+          </div>
+        </Html>
+      )}
+    </mesh>
   );
 };
 

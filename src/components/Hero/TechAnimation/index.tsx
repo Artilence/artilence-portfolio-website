@@ -24,7 +24,7 @@ const TechAnimation = () => {
         camera={{
           position: [0, -500, 200],
           fov: 45,
-          zoom: 2.0,
+          zoom: 3.0,
         }}
         orthographic
       >
@@ -43,7 +43,7 @@ const TechAnimation = () => {
           isAnimationRunning={isAnimationRunning}
           setIsAnimationRunning={setIsAnimationRunning}
         />
-        <axesHelper args={[500]} />
+        {/* <axesHelper args={[500]} /> */}
       </Canvas>
     </div>
   );
