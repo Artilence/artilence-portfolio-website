@@ -1,12 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import { clientsArray } from "@/constants";
 import Image from "../shared/Image";
-import { clientsArray } from "../../constants";
 
 const Clients = () => {
   const { centeredSlides, speed, autoplay } = {
@@ -16,25 +15,13 @@ const Clients = () => {
       delay: 0,
       disableOnInteraction: false,
     },
-    // breakpoints: {
-    //   1024: {
-    //     slidesPerView: 3,
-    //   },
-    //   768: {
-    //     slidesPerView: 2,
-    //   },
-    //   640: {
-    //     slidesPerView: 1,
-    //   },
-    // },
   };
   return (
-    <div className="flex">
+    <div className="flex scroll-m-[147px]" id="our-partners">
       <Swiper
         centeredSlides={centeredSlides}
         speed={speed}
         autoplay={autoplay}
-        // breakpoints={breakpoints}
         slidesPerView={3}
         loop
         modules={[Autoplay]}

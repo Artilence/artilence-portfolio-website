@@ -1,7 +1,8 @@
 import { useRef } from "react";
+
+import useIsInViewport from "@/hooks/useIsInViewport";
 import AnimatedBar from "../shared/AnimatedBar";
 import Input from "../shared/Input";
-import useIsInViewport from "../../hooks/useIsInViewport";
 
 const Connect = () => {
   const titleRef = useRef<HTMLDivElement>(null);
@@ -9,7 +10,10 @@ const Connect = () => {
   const isInViewport = useIsInViewport(titleRef);
 
   return (
-    <div className="bg-white border-t-2 border-primary p-8 py-11 gap-7  lg:border-none 2xl:min-h-screen">
+    <div
+      className="bg-white border-t-2 border-primary p-8 py-11 gap-7 2xl:min-h-screen scroll-m-[147px]"
+      id="contact-us"
+    >
       <div className="max-w-[1676px] mx-auto flex gap-[364px]">
         <div className="flex-1 flex flex-col gap-1 sm:gap-2 md:gap-8 xl:gap-16">
           <div

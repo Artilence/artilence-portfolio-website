@@ -1,13 +1,14 @@
 import { useState } from "react";
+
 import { navList } from "../Navbar";
 import LogoLight from "../shared/icons/LogoLight";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
 
-  const navigation = navList?.map(({ name }) => ({
+  const navigation = navList?.map(({ name, href }) => ({
     title: name,
-    path: "/",
+    path: href,
     isDrapdown: false,
   }));
 
@@ -76,7 +77,7 @@ const Navbar = () => {
                     {
                       <a
                         href={item.path}
-                        className="block text-white text-right text-4xl uppercase font-bold hover:text-yellow md:text-base lg:text-[20px]"
+                        className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[20px]"
                       >
                         {item.title}
                       </a>

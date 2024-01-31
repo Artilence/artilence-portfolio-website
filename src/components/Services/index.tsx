@@ -1,9 +1,9 @@
 import { useRef } from "react";
 
-import { techStack } from "../../constants";
 import ServiceItem from "./ServiceItem";
-import useIsInViewport from "../../hooks/useIsInViewport";
 import AnimatedBar from "../shared/AnimatedBar";
+import { techStack } from "@/constants";
+import useIsInViewport from "@/hooks/useIsInViewport";
 
 const Services = () => {
   const mainSlideRef = useRef<HTMLDivElement>(null);
@@ -13,7 +13,7 @@ const Services = () => {
   const isMainSlideInViewport = useIsInViewport(mainSlideRef);
 
   return (
-    <div className="bg-primary">
+    <div className="bg-primary scroll-m-[147px]" id="what-we-do">
       <ul id="cards">
         <li className="card ">
           <div className="card-body">

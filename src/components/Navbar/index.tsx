@@ -3,18 +3,22 @@ export const navList = [
   {
     id: 1,
     name: "What we do",
+    href: "#what-we-do",
   },
   {
     id: 2,
     name: "Our Partners",
+    href: "#our-partners",
   },
   {
     id: 3,
     name: "Client Testimonials",
+    href: "#client-testimonials",
   },
   {
     id: 4,
     name: "Contact Us",
+    href: "#contact-us",
   },
 ];
 const Navbar = () => {

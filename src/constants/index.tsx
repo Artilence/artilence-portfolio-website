@@ -1,6 +1,5 @@
 import { FaInstagram, FaFacebook, FaLinkedinIn } from "react-icons/fa6";
 import getUuid from "uuid-by-string";
-export const HEADER_CURSOR_CLASS_NAME = "heading_cursor";
 export const clientsArray: ImageObject[] = [
   {
     id: 1,

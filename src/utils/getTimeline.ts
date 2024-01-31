@@ -15,10 +15,10 @@ export const getTimeline = (textRef: any) => gsap.timeline({
         // },
         toggleActions: "play pause reverse pause",
         onEnter: function () {
-          console.log("Play Animation");
+          // console.log("Play Animation");
         },
         onLeaveBack: function () {
-          console.log("Pause Animation");
+          // console.log("Pause Animation");
         },
       },
     });
