@@ -1,11 +1,11 @@
 import { Canvas } from "@react-three/fiber";
-import { Html, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { useEffect, useState } from "react";
-import Body from "./Body";
-import Image from "../../shared/Image";
 import { useParams } from "react-router-dom";
-import { HEADER_CURSOR_CLASS_NAME, shells } from "../../../constants";
-import { TypeAnimation } from "react-type-animation";
+
+import Body from "./Body";
+import { shells } from "@/constants";
+import TechDialog from "./TechDialog";
 
 export var Colors = {
   red: 0xf25346,
@@ -22,14 +22,14 @@ export var Colors = {
 const TechAnimation = () => {
   const [isAnimationRunning, setIsAnimationRunning] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any>();
+  const [dialogPosition, setDialogPosition] = useState<"left" | "right" | null>(
+    null
+  );
   const { id: selectedId } = useParams();
 
   useEffect(() => {
     if (selectedId) {
-      // setIsAnimationRunning(true);
-      // const selectedItem =
       setSelectedItem(shells.flat().find((shell) => shell.id === selectedId));
-      // console.log(selectedItem);
     }
   }, [selectedId]);
 
@@ -44,44 +44,21 @@ const TechAnimation = () => {
         }}
         orthographic
       >
-        {selectedId && selectedItem && (
-          <Html
-            distanceFactor={1}
-            position={[-270, 250, 0]}
-            style={{
-              position: "relative",
-            }}
-            zIndexRange={[0, 1]}
-            className="animate-fade-in font-primary tracking-normal leading-tight"
-          >
-            <div className="text-primary text-[4px] absolute z-10 top-4 left-2 max-w-[80px]">
-              <TypeAnimation
-                className={HEADER_CURSOR_CLASS_NAME}
-                cursor={false}
-                sequence={[
-                  selectedItem.name,
-                  0,
-                  (el: HTMLSpanElement) =>
-                    el.classList.remove(HEADER_CURSOR_CLASS_NAME),
-                ]}
-                wrapper="span"
-                style={{ fontSize: "12px", display: "inline-block" }}
-              />
-              <br />
-
-              <TypeAnimation
-                speed={50}
-                cursor={false}
-                sequence={[selectedItem.description, 1000]}
-                wrapper="p"
-                style={{ fontSize: "6.5px", display: "inline-block" }}
-              />
-            </div>
-            <div className="relative top-0 right-0 ">
-              <Image src="/ldialog.svg" width={180} height={150} alt="popup" />
-            </div>
-          </Html>
-        )}
+        {selectedId &&
+          selectedItem &&
+          (dialogPosition === "left" ? (
+            <TechDialog
+              selectedItem={selectedItem}
+              dialogImage="/ldialog.svg"
+              position={[-270, 250, 0]}
+            />
+          ) : (
+            <TechDialog
+              selectedItem={selectedItem}
+              dialogImage="/ldialog.svg"
+              position={[180, 250, 0]}
+            />
+          ))}
 
         {/* <Stats /> */}
 
@@ -97,6 +74,7 @@ const TechAnimation = () => {
         <Body
           isAnimationRunning={isAnimationRunning}
           setIsAnimationRunning={setIsAnimationRunning}
+          setDialogPosition={setDialogPosition}
         />
         {/* <axesHelper args={[500]} /> */}
       </Canvas>

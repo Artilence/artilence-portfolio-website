@@ -1,15 +1,19 @@
 import { useRef } from "react";
 import { Group } from "three";
-import Torus from "../Torus";
-import Sphere from "../Sphere";
-import { Colors } from "..";
 import { useFrame } from "@react-three/fiber";
+
+import Torus from "../Torus";
+import { Colors } from "..";
+import Sphere from "../Sphere";
 
 interface ValenceProps {
   ringNumber: number;
   item: { src: string; id: string; name: string }[];
   isAnimationRunning: boolean;
   setIsAnimationRunning: React.Dispatch<React.SetStateAction<boolean>>;
+  setDialogPosition: React.Dispatch<
+    React.SetStateAction<"left" | "right" | null>
+  >;
 }
 
 const Valence: React.FC<ValenceProps> = ({
@@ -17,6 +21,7 @@ const Valence: React.FC<ValenceProps> = ({
   item,
   isAnimationRunning,
   setIsAnimationRunning,
+  setDialogPosition,
 }) => {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -61,6 +66,7 @@ const Valence: React.FC<ValenceProps> = ({
               src={src}
               name={name}
               setIsAnimationRunning={setIsAnimationRunning}
+              setDialogPosition={setDialogPosition}
             />
           );
         })}

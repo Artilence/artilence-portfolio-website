@@ -11,6 +11,7 @@ import {
   Object3DEventMap,
   Vector2,
 } from "three";
+
 import { Colors } from "..";
 
 interface SphereProps {
@@ -21,6 +22,9 @@ interface SphereProps {
   src?: string;
   name?: string;
   setIsAnimationRunning: React.Dispatch<React.SetStateAction<boolean>>;
+  setDialogPosition?: React.Dispatch<
+    React.SetStateAction<"left" | "right" | null>
+  >;
 }
 
 const Sphere: React.FC<SphereProps> = ({
@@ -30,6 +34,7 @@ const Sphere: React.FC<SphereProps> = ({
   id,
   src,
   setIsAnimationRunning,
+  setDialogPosition,
 }) => {
   const colorMap = useTexture(src || "artilencelogo.png");
   colorMap.center = new Vector2(0.5, 0.5);
@@ -64,10 +69,16 @@ const Sphere: React.FC<SphereProps> = ({
         e.stopPropagation(),
         setHovered(true),
         e.object ? navigate("/" + e.object.name) : navigate("/"),
-        setIsAnimationRunning(false)
+        setIsAnimationRunning(false),
+        e.point.x < 0
+          ? setDialogPosition?.("left")
+          : setDialogPosition?.("right")
       )}
       onPointerLeave={() => (
-        setHovered(false), navigate("/"), setIsAnimationRunning(true)
+        setHovered(false),
+        navigate("/"),
+        setIsAnimationRunning(true),
+        setDialogPosition?.(null)
       )}
       name={id}
       // onClick={(e) => console.log(e.object.position)}

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Data Seventy Std;
-  src: url("fonts/Data Seventy Std Regular.otf") format("opentype");
+  font-family: Disposable Droid BB;
+  src: url("fonts/DisposableDroidBB.ttf") format("truetype");
 }
 
 html {

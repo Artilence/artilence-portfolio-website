@@ -8,7 +8,7 @@ export default {
 theme: {
     extend: {
 fontFamily: {
-        primary: "Data Seventy Std",
+        primary: "Disposable Droid BB",
       },
       colors: {
         'primary': '#06C996',

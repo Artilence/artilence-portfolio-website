@@ -2,23 +2,28 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Physics } from "@react-three/cannon";
 import { useNavigate } from "react-router-dom";
-import { shells } from "../../../../constants";
-import Valence from "../Valence";
-import Sphere from "../Sphere";
 import { useRef } from "react";
 import { Group } from "three";
 import { useGSAP } from "@gsap/react";
+
+import Sphere from "../Sphere";
+import { shells } from "@/constants";
+import Valence from "../Valence";
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface IAnimationBodyProps {
   isAnimationRunning: boolean;
   setIsAnimationRunning: React.Dispatch<React.SetStateAction<boolean>>;
+  setDialogPosition: React.Dispatch<
+    React.SetStateAction<"left" | "right" | null>
+  >;
 }
 
 const Body: React.FC<IAnimationBodyProps> = ({
   isAnimationRunning,
   setIsAnimationRunning,
+  setDialogPosition,
 }) => {
   const navigate = useNavigate();
   const groupRef = useRef<Group>(null!);
@@ -37,9 +42,6 @@ const Body: React.FC<IAnimationBodyProps> = ({
         //   indent: 2,
         // },
         toggleActions: "play pause reverse pause",
-        onEnter: function () {
-          // console.log("Play Animation");
-        },
       },
     });
 
@@ -59,13 +61,6 @@ const Body: React.FC<IAnimationBodyProps> = ({
   return (
     <Physics gravity={[0, 0, 0]}>
       <group
-        // onClick={(e: ThreeEvent<MouseEvent>) => (
-        // @ts-ignore
-        // e.stopPropagation(),
-        // e.object ? navigate("/" + e.object.name) : navigate("/"),
-        // setIsAnimationRunning(false)
-        // console.log(e.object)
-        // )}
         ref={groupRef}
         onPointerMissed={() => (navigate("/"), setIsAnimationRunning(true))}
       >
@@ -80,6 +75,7 @@ const Body: React.FC<IAnimationBodyProps> = ({
                 item={shells[shellCountIndex]}
                 isAnimationRunning={isAnimationRunning}
                 setIsAnimationRunning={setIsAnimationRunning}
+                setDialogPosition={setDialogPosition}
               />
             );
           }
