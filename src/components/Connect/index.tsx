@@ -11,7 +11,7 @@ const Connect = () => {
 
   return (
     <div
-      className="bg-white border-t-2 border-primary p-8 py-11 gap-7 2xl:min-h-screen scroll-m-[147px]"
+      className="flex items-center bg-white border-t-2 border-primary p-8 py-11 gap-7 2xl:min-h-screen scroll-m-[147px]"
       id="contact-us"
     >
       <div className="max-w-[1676px] mx-auto flex gap-[364px]">

@@ -28,14 +28,14 @@ body {
   background-size: 100% 100%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-animation: fillText 5s ease-in forwards;
-  animation: fillText 5s ease-in forwards;
+  -webkit-animation: fillText 5.5s ease-in forwards;
+  animation: fillText 5.5s ease-in forwards;
 }
 @keyframes fillText {
   @for $i from 0 to 50 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.1) calc(100-$(i))%,
+        rgba(255, 255, 255, 0.5) calc(100-$(i))%,
         rgb(207 255 71) $(i)%
       );
     }
@@ -43,7 +43,7 @@ body {
   @for $i from 51 to 100 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.1) calc(100-$(i))%,
+        rgba(255, 255, 255, 0.5) calc(100-$(i))%,
         rgb(207 255 71) calc(100-$(i))%
       );
     }
@@ -67,7 +67,7 @@ body {
   padding-left: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  /* grid-template-rows: repeat(var(--cards), var(--cardHeight)); */
   gap: var(--cardMargin);
 }
 
@@ -86,7 +86,7 @@ body {
 
 .card {
   position: sticky;
-  top: 12px;
+  top: 147px;
   height: 100vh;
 }
 
@@ -94,7 +94,6 @@ body {
   background-color: #52b2cf;
 }
 #card2 {
-  /* background-color: #7EC4CF; */
   background-color: #e5a36f;
 }
 #card3 {

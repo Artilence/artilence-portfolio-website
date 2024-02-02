@@ -77,10 +77,14 @@ relative  flex flex-wrap justify-between gap-6 z-0
        2xl:gap-x-[70px] 2xl:flex-[1.2]
         `}
           >
-            {navList?.map(({ id, name }) => (
-              <div key={id} className="hover:text-yellow cursor-pointer">
+            {navList?.map(({ id, name, href }) => (
+              <a
+                href={href}
+                key={id}
+                className="hover:text-yellow cursor-pointer"
+              >
                 {name}
-              </div>
+              </a>
             ))}
           </div>
         </div>

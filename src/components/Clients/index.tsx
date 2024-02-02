@@ -17,7 +17,7 @@ const Clients = () => {
     },
   };
   return (
-    <div className="flex scroll-m-[147px]" id="our-partners">
+    <div className="flex scroll-m-80" id="our-partners">
       <Swiper
         centeredSlides={centeredSlides}
         speed={speed}

@@ -44,8 +44,7 @@ fontFamily: {
       'grow-circle': 'grow-circle 0.5s ease-out forwards',
       'expand': 'expand 3s ease-in forwards',
       'expand-image': 'expand-image 1s linear forwards 1s',
-// 'move-backwards': 'move-backwards 3s ease-in forwards 12s',
-// 'move-backwards-reverse': 'move-backwards 3s ease-in reverse forwards 12s',
+      'swipe-animation': 'swipe-animation 1s ease-in-out forwards infinite',
     },
     fontFamily: {
       'sans': ['Helvetica',]

@@ -15,12 +15,12 @@ const Services = () => {
   return (
     <div className="bg-primary scroll-m-[147px]" id="what-we-do">
       <ul id="cards">
-        <li className="card ">
+        <li className="card">
           <div className="card-body">
             <div
               className={`
       bg-shapes-bg bg-right bg-no-repeat bg-cover 
- md:px-8
+ md:px-8 min-h-screen
       `}
             >
               <div
@@ -43,12 +43,7 @@ const Services = () => {
             `}
                     ref={mainSlideRef}
                   >
-                    <div
-                      className={`
-            `}
-                    >
-                      what
-                    </div>
+                    <div className={``}>what</div>
                     <div>we</div>
                     <div>do</div>
                   </div>

@@ -52,8 +52,9 @@ const Hero = () => {
                         {generateRandomArray(letter)}
                       </div>
                     )
-                  )}{" "}
+                  )}
                 </div>
+                <span className="w-[18px] h-12"> </span>
                 <div className="flex items-center justify-end h-[70px] sm:h-[105px]  lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden">
                   {"tech".split("").map((letter, index) =>
                     index % 2 === 0 ? (
@@ -75,41 +76,48 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex text-[#FFFFFF]/50 text-[76px] sm:text-[144px] md:text-[170px] lg:text-[230px] xl:text-[290px]  2xl:text-[387px]">
-                <div className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]  overflow-hidden  ">
-                  {"alliance".split("").map((letter, index) =>
-                    index % 2 === 0 ? (
-                      <div
-                        key={index}
-                        className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg"
-                      >
-                        {generateRandomArray(letter)}
-                      </div>
-                    ) : (
-                      <div
-                        key={index}
-                        className="translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll-lg"
-                      >
-                        {generateRandomArray(letter)}
-                      </div>
-                    )
-                  )}
-                </div>
                 {!isQuestionReady ? (
-                  <div className="tracking-tighter relative cursor-pointer">
-                    <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
-                      <div className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg">
-                        <QuestionMark />
-                        <QuestionMark />
-                        <QuestionMark />
+                  <>
+                    <div className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]  overflow-hidden  ">
+                      {"alliance".split("").map((letter, index) =>
+                        index % 2 === 0 ? (
+                          <div
+                            key={index}
+                            className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg"
+                          >
+                            {generateRandomArray(letter)}
+                          </div>
+                        ) : (
+                          <div
+                            key={index}
+                            className="translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll-lg"
+                          >
+                            {generateRandomArray(letter)}
+                          </div>
+                        )
+                      )}
+                    </div>
+                    <div className="tracking-tighter relative cursor-pointer">
+                      <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
+                        <div className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg">
+                          <QuestionMark />
+                          <QuestionMark />
+                          <QuestionMark />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </>
                 ) : (
-                  <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
-                    <div className="flex flex-col justify-center items-center animated-text animate-fill-text gap-[18px]">
-                      <QuestionMarkAnimated />
+                  <>
+                    <div className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]  overflow-hidden animated-text">
+                      alliance
                     </div>
-                  </div>
+                    <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
+                      <div className="flex flex-col justify-center items-center gap-[18px]">
+                        <QuestionMarkAnimated />
+                      </div>
+                    </div>
+                  </>
                 )}
               </div>
             </>
