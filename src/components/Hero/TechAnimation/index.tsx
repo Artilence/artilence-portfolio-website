@@ -50,7 +50,7 @@ const TechAnimation = () => {
             <TechDialog
               selectedItem={selectedItem}
               dialogImage="/ldialog.svg"
-              position={[-270, 250, 0]}
+              position={[-290, 250, 0]}
             />
           ) : (
             <TechDialog
