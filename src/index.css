@@ -203,7 +203,7 @@ h2 {
 }
 
 .swiper-button-prev, .swiper-button-next {
-  background-image: url("/public/navigation-arrow.svg");
+  background-image: url("/navigation-arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
