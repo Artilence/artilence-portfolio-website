@@ -186,3 +186,18 @@ h2 {
     opacity: 0;
   }
 }
+
+.swiper-button-prev, .swiper-button-next {
+  background: #06c996;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: white;
+
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+    display: none;
+}
+

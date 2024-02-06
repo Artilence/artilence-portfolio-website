@@ -479,6 +479,33 @@ export const shells = [
   ],
 ];
 
+export const clientTestimonialsList = [
+  {
+    src: "img/client_profiles/bryan.png",
+    id: getUuid("bryan.png"),
+    name: "Bryan",
+    alt: "Profile image of Bryan",
+    review:
+      "Working with Artilence on our AI projects has been a game-changer. Their team's expertise in artificial intelligence is unparalleled. They delivered a cutting-edge solution that exceeded our expectations. Looking forward to future collaborations!",
+  },
+  {
+    src: "img/client_profiles/luke.png",
+    id: getUuid("luke.png"),
+    name: "Luke",
+    alt: "Profile image of Luke",
+    review:
+      "Exceptional web development services! The team not only created a visually stunning website but also ensured it's highly functional and user-friendly. Their attention to detail and commitment to quality is truly commendable. Our online presence has never been stronger.",
+  },
+  {
+    src: "img/client_profiles/jane.png",
+    id: getUuid("jane.png"),
+    name: "Jane",
+    alt: "Profile image of Jane",
+    review:
+      "The DevOps solutions provided by Artilence have significantly improved our development and deployment processes. Their team implemented robust automation, enhancing the speed and reliability of our software releases. It's been a game-changer for our development team.",
+  },
+];
+
 export interface ImageObject {
   id: number;
   src: string;

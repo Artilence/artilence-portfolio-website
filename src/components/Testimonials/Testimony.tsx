@@ -1,24 +1,38 @@
-const Testimony = () => {
+import { FC } from "react";
+
+const Testimony: FC<ITestimonyProps> = ({ src, alt, name, review }) => {
   return (
-    <div className="bg-white p-8 lg:hidden">
-      <div className="flex gap-6 items-center justify-center">
-        <div className="flex-1">
-          <div className="w-full aspect-[1/1.5] bg-gray">image</div>
-        </div>
-        <div className="flex-1 flex flex-col text-xs font-light tracking-wider md:text-lg">
-          <div className="text-gray">
-            I have been working with Artilence for the past few months and I can
-            confidently say that their services are top-notch. They have a team
-            of experts in artificial intelligence and they have been able to
-            provide us with the best solutions for our projects. Their tech is
-            up-to-date and their customer service is second to none. I highly
-            recommend Artilence for any AI related project.
-          </div>
-          <div className="text-primary">company</div>
-        </div>
+    <section className="min-h-screen flex items-center justify-center bg-white text-stone-800 dark:bg-gray-900">
+      <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+        <figure className="max-w-screen-sm mx-auto">
+          <img
+            className="h-[120px] w-[120px] mx-auto mb-6 text-gray-400 rounded-full before:bg-primary border-[6px] border-primary"
+            src={src}
+            alt={alt}
+          />
+          <blockquote>
+            <p className="text-[22px] font-light text-gray-900 dark:text-white">
+              "{review}"
+            </p>
+          </blockquote>
+          <figcaption className="flex items-center justify-center mt-4 space-x-3">
+            <div className="w-1/2">
+              <div className="flex items-center text-xl text-stone-500 divider">
+                {name}
+              </div>
+            </div>
+          </figcaption>
+        </figure>
       </div>
-    </div>
+    </section>
   );
 };
+
+interface ITestimonyProps {
+  src: string;
+  alt: string;
+  name: string;
+  review: string;
+}
 
 export default Testimony;
