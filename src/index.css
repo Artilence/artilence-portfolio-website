@@ -187,6 +187,12 @@ h2 {
   }
 }
 
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+    display: none;
+}
+
 .swiper-button-prev, .swiper-button-next {
   background: #06c996;
   height: 40px;
@@ -196,8 +202,15 @@ h2 {
 
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
-    content: "";
-    display: none;
+.swiper-button-prev, .swiper-button-next {
+  background-image: url("/public/navigation-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
 }
+
+.swiper-button-prev{
+  transform: rotate(180deg);
+}
+
 

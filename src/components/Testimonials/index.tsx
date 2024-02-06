@@ -24,7 +24,7 @@ const Testimonials = () => {
         className="bg-white p-8 md:py-48 xl:min-h-screen scroll-m-[147px] sticky top-0"
         id="client-testimonials"
       >
-        <div className="max-w-[1676px] mx-auto">
+        <div className="">
           <div
             className="text-primary text-5xl font-light md:max-w-[60%] md:text-9xl xl:text-[174px] "
             ref={clientTestimonialRef}
@@ -38,17 +38,17 @@ const Testimonials = () => {
         <Swiper
           slidesPerView={1}
           className="mySwiper"
-          loop
           navigation
+          loop
           modules={[Navigation]}
         >
-          <div className="swiper-button-prev">
+          <div className="swiper-button-prev!">
             <Image
               src="/navigation-arrow.svg"
-              alt="right arrow"
+              alt="left arrow"
               height={20}
               width={20}
-              className="rotate-180"
+              className="rotate-180 select-none"
             />
           </div>
           {clientTestimonialsList?.map(({ id, src, alt, name, review }) => (
@@ -57,10 +57,11 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
 
-          <div className="swiper-button-next">
+          <div className="swiper-button-next!">
             <Image
               src="/navigation-arrow.svg"
               alt="right arrow"
+              className="select-none"
               height={20}
               width={20}
             />
