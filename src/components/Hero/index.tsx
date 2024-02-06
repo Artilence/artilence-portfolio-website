@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="flex px-[18px] ">
+      <div className="px-[18px] bg-primary">
         <div className="relative min-h-[370px] lg:-top-[100px] sm:min-h-[60vh] w-full flex flex-col justify-end font-bold relative lg:min-h-screen  max-w-[1676px] mx-auto ">
           {startScrollRoutine ? (
             <ScrollRoutine />
@@ -120,12 +120,12 @@ const Hero = () => {
                   </>
                 )}
               </div>
+              <div className="w-[80px] h-[67px] mt-8"></div>
             </>
           )}
         </div>
+        <TechAnimation />
       </div>
-
-      <TechAnimation />
     </>
   );
 };

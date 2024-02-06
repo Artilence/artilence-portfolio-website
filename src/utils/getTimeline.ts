@@ -1,11 +1,11 @@
 
 import gsap from "gsap";
 
-export const getTimeline = (textRef: any) => gsap.timeline({
+export const getTimeline = (textRef: any, start: string = "-60% top", end: string = "30% top") => gsap.timeline({
       scrollTrigger: {
-        trigger: textRef.current,
-        start: "-60% top",
-        end: "30% top",
+        trigger: textRef.current || textRef,
+        start,
+        end,
         scrub: 1,
         // markers: {
         //   startColor: "black",

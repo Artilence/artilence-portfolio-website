@@ -5,7 +5,6 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar3";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
-import Layout from "./components/shared/Layout";
 
 function App() {
   return (
@@ -13,9 +12,7 @@ function App() {
       <div className="relative">
         <Navbar />
       </div>
-      <Layout>
-        <Hero />
-      </Layout>
+      <Hero />
       <Clients />
       <Services />
       <Testimonials />

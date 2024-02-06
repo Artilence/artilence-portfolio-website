@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ScrollRoutine = () => {
   const textRef = useRef<HTMLDivElement>(null!);
   const textRef2 = useRef<HTMLDivElement>(null!);
+  const scrollRef = useRef<HTMLDivElement>(null!);
 
   useGSAP(() => {
     const rotationTimeline = getTimeline(textRef);
@@ -24,12 +25,18 @@ const ScrollRoutine = () => {
       y: "100%",
       duration: 1,
     });
-  }, [textRef, textRef2]);
+
+    const rotationTimeline3 = getTimeline(".alliance", "top top", "30% top");
+    rotationTimeline3.to(scrollRef.current, {
+      y: "100%",
+      duration: 1,
+    });
+  }, [textRef, textRef2, scrollRef]);
   return (
     <div className="relative">
-      <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white font-light relative top-0 ">
-        <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden">
-          <div className="hide-text tracking-wide flex" ref={textRef}>
+      <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white font-light relative top-0">
+        <div className="alliance flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden">
+          <div className="tracking-wide flex" ref={textRef}>
             {"finding".split("").map((letter, index) => (
               <div key={index}>{letter}</div>
             ))}
@@ -40,7 +47,7 @@ const ScrollRoutine = () => {
           </div>
         </div>
       </div>
-      <div className="flex text-yellow text-[76px] sm:text-[144px] md:text-[170px] lg:text-[230px] xl:text-[290px]  2xl:text-[387px] overflow-hidden hide-text">
+      <div className="flex text-yellow text-[76px] sm:text-[144px] md:text-[170px] lg:text-[230px] xl:text-[290px]  2xl:text-[387px] overflow-hidden">
         <div
           className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]"
           ref={textRef2}
@@ -51,8 +58,10 @@ const ScrollRoutine = () => {
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-[90px] left-1/2 transform -translate-x-1/2">
-        <ScrollAnimation />
+      <div className="overflow-hidden mt-8">
+        <div ref={scrollRef} className="flex items-center justify-center">
+          <ScrollAnimation />
+        </div>
       </div>
     </div>
   );

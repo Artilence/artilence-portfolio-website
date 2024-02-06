@@ -35,16 +35,16 @@ body {
   @for $i from 0 to 50 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.5) calc(100-$(i))%,
-        rgb(207 255 71) $(i)%
+        rgba(255, 255, 255, 0.5) calc(100-$(i)) %,
+        rgb(207 255 71) $(i) %
       );
     }
   }
   @for $i from 51 to 100 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.5) calc(100-$(i))%,
-        rgb(207 255 71) calc(100-$(i))%
+        rgba(255, 255, 255, 0.5) calc(100-$(i)) %,
+        rgb(207 255 71) calc(100-$(i)) %
       );
     }
   }
@@ -187,30 +187,29 @@ h2 {
   }
 }
 
-
-.swiper-button-next::after, .swiper-button-prev::after {
-    content: "";
-    display: none;
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+  display: none;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   background: #06c996;
   height: 40px;
   width: 40px;
   border-radius: 50%;
   color: white;
-
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   background-image: url("/navigation-arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
   transform: rotate(180deg);
 }
-
-
