@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Disposable Droid BB;
-  src: url("fonts/DisposableDroidBB.ttf") format("truetype");
-}
 
 html {
   box-sizing: border-box;
