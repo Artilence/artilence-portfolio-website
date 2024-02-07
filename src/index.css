@@ -28,23 +28,23 @@ body {
   background-size: 100% 100%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-animation: fillText 5.5s ease-in forwards;
-  animation: fillText 5.5s ease-in forwards;
+  -webkit-animation: fillText 2.5s ease-in forwards;
+  animation: fillText 2.5s ease-in forwards;
 }
 @keyframes fillText {
   @for $i from 0 to 50 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.5) calc(100-$(i)) %,
-        rgb(207 255 71) $(i) %
+        rgba(255, 255, 255, 0.5) calc(100-$(i))%,
+        rgb(207 255 71) $(i)%
       );
     }
   }
   @for $i from 51 to 100 {
     $(i)% {
       background-image: -webkit-linear-gradient(
-        rgba(255, 255, 255, 0.5) calc(100-$(i)) %,
-        rgb(207 255 71) calc(100-$(i)) %
+        rgba(255, 255, 255, 0.5) calc(100-$(i))%,
+        rgb(207 255 71) calc(100-$(i))%
       );
     }
   }
@@ -164,7 +164,7 @@ h2 {
 }
 
 #pth {
-  animation: anim 5s linear forwards 1s;
+  animation: anim 2.5s linear forwards 1s;
 }
 
 .heading_cursor::after {

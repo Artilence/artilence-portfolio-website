@@ -22,7 +22,7 @@ const Hero = () => {
       setTimeout(() => {
         setStartScrollRoutine(true);
         return;
-      }, 10900);
+      }, 9000);
     }
   });
 
