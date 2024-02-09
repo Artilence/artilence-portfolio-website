@@ -24,8 +24,8 @@ const Navbar = () => {
             <a href="/">
               <LogoLight className="hidden md:block" />
               <img
-                className="md:hidden"
-                src="/logo-symbol.svg"
+                className="sm:hidden"
+                src="/logo-icon.png"
                 width="32"
                 height="32"
               />
