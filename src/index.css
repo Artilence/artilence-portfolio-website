@@ -82,7 +82,7 @@ body {
 
 .card {
   position: sticky;
-  top: 147px;
+  top: 0;
   height: 100vh;
 }
 

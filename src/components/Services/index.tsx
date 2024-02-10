@@ -15,7 +15,7 @@ const Services = () => {
   return (
     <div className="bg-primary scroll-m-[147px]" id="what-we-do">
       <ul id="cards">
-        <li className="card">
+        <li className="card" key={"unique-key"}>
           <div className="card-body">
             <div
               className={`
@@ -89,7 +89,6 @@ const Services = () => {
               ref={secondaySlidesRefs[index]}
             >
               <ServiceItem
-                key={key}
                 title={key}
                 imageInfo={techStack[key as keyof typeof techStack]}
                 isInviewport={useIsInViewport(secondaySlidesRefs[index])}

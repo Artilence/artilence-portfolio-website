@@ -14,51 +14,56 @@ const ScrollRoutine = () => {
   const scrollRef = useRef<HTMLDivElement>(null!);
 
   useGSAP(() => {
-    const rotationTimeline = getTimeline(textRef);
-    rotationTimeline.to(textRef.current, {
+    const textHidingTimeline = getTimeline(textRef);
+    textHidingTimeline.to(textRef.current, {
       y: "100%",
       duration: 1,
     });
 
-    const rotationTimeline2 = getTimeline(textRef2);
-    rotationTimeline2.to(textRef2.current, {
+    const textHidingTimeline2 = getTimeline(textRef2);
+    textHidingTimeline2.to(textRef2.current, {
       y: "100%",
       duration: 1,
     });
 
-    const rotationTimeline3 = getTimeline(".alliance", "top top", "30% top");
-    rotationTimeline3.to(scrollRef.current, {
+    const textHidingTimeline3 = getTimeline(".alliance", "top top", "30% top");
+    textHidingTimeline3.to(scrollRef.current, {
       y: "100%",
       duration: 1,
     });
   }, [textRef, textRef2, scrollRef]);
   return (
     <div className="relative">
-      <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white font-light relative top-0">
-        <div className="alliance flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden">
+      <div className="flex flex-col text-[12.5vw]  sm:flex-row 2xl:text-[240px] text-white font-light relative top-0 text-white">
+        <div className="flex items-center h-[17.875vw] sm:h-[16vw] md:h-[15vw] lg:h-[14.5vw] 2xl:h-[290px] overflow-hidden">
           <div className="tracking-wide flex" ref={textRef}>
             {"finding".split("").map((letter, index) => (
               <div key={index}>{letter}</div>
             ))}
-            <span className="w-[18px] h-12"> </span>
+            <span
+              className={`
+                h-[8px] w-[8px] sm:h-4 sm:w-4
+                xl:h-12 xl:w-[18px]`}
+            >
+              {" "}
+            </span>
             {"tech".split("").map((letter, index) => (
               <div key={index}>{letter}</div>
             ))}
           </div>
         </div>
       </div>
-      <div className="flex text-yellow text-[76px] sm:text-[144px] md:text-[170px] lg:text-[230px] xl:text-[290px]  2xl:text-[387px] overflow-hidden">
+      <div className="alliance flex text-yellow text-[21.313vw] sm:text-[22.313vw] 2xl:text-[390px] overflow-hidden">
         <div
-          className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]"
+          className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px]"
           ref={textRef2}
         >
           alliance
-          <div className="relative top-[7px]">
-            <QuestionMark color="#CFFF47" />
-          </div>
+          <div className="flex items-center h-[25vw]  overflow-hidden"></div>
+          <QuestionMark color="#CFFF47" />
         </div>
       </div>
-      <div className="overflow-hidden mt-8">
+      <div className="hidden md:block overflow-hidden mt-8">
         <div ref={scrollRef} className="flex items-center justify-center">
           <ScrollAnimation />
         </div>

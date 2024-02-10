@@ -16,8 +16,6 @@ const Testimonials = () => {
   const clientTestimonialRef = useRef<HTMLDivElement>(null);
   const isInView = useIsInViewport(clientTestimonialRef);
 
-  console.log(clientTestimonialsList);
-
   return (
     <div className="max-w-[1676px] mx-auto">
       <div

@@ -8,12 +8,7 @@ import { shells } from "@/constants";
 import TechDialog from "./TechDialog";
 
 export var Colors = {
-  red: 0xf25346,
   white: 0xffffff,
-  brown: 0xcfff47,
-  pink: 0xb3c633,
-  brownDark: 0xa0c633,
-  blue: 0x68c3c0,
   primary: 0x06c996,
   yellow: 0xcfff47,
   gray: 0x676767,
@@ -40,7 +35,7 @@ const TechAnimation = () => {
         camera={{
           position: [0, -500, 200],
           fov: 45,
-          zoom: 3.0,
+          zoom: 0.8,
         }}
         orthographic
       >

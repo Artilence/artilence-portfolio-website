@@ -43,7 +43,7 @@ const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
               ) : (
                 <>
                   {isInviewport && (
-                    <div className="col-span-1 relative" key={id}>
+                    <div className="col-span-1 relative" key={`${id}test`}>
                       <div
                         className={`w-0 h-[137px] bg-yellow rounded-full flex justify-center items-center col-span-1 animate-expand-image relative right-0`}
                       >

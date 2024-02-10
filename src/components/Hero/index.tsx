@@ -29,18 +29,23 @@ const Hero = () => {
   return (
     <>
       <div className="px-[18px] bg-primary">
-        <div className="relative min-h-[370px] lg:-top-[100px] sm:min-h-[60vh] w-full flex flex-col justify-end font-bold relative lg:min-h-screen  max-w-[1676px] mx-auto ">
+        <div
+          className={`relative justify-end min-h-[40vh] pb-8
+          sm:min-h-[60vh]
+ w-full flex flex-col xl:justify-end font-bold relative lg:min-h-screen  max-w-[1676px] mx-auto
+        `}
+        >
           {startScrollRoutine ? (
             <ScrollRoutine />
           ) : (
             <>
-              <div className="flex flex-col text-[60px] sm:text-[90px] sm:flex-row lg:text-[120px] xl:text-[150px] 2xl:text-[190px] text-white font-light  ">
-                <div className="flex items-center h-[70px] sm:h-[105px] lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden tracking-wide">
+              <div className="flex text-[12.5vw] sm:flex-row text-white font-light 2xl:text-[240px]">
+                <div className="flex items-center h-[17.875vw] sm:h-[16vw] md:h-[15vw] lg:h-[14.5vw] 2xl:h-[290px] tracking-wide overflow-hidden">
                   {"finding".split("").map((letter, index) =>
                     index % 2 === 0 ? (
                       <div
                         key={index}
-                        className="-translate-y-[100%] flex flex-col justify-center animate-v-bt-scroll tracking-wide"
+                        className="-translate-y-[100%] flex flex-col justify-start  animate-v-bt-scroll tracking-wide"
                       >
                         {generateRandomArray(letter)}
                       </div>
@@ -54,8 +59,14 @@ const Hero = () => {
                     )
                   )}
                 </div>
-                <span className="w-[18px] h-12"> </span>
-                <div className="flex items-center justify-end h-[70px] sm:h-[105px]  lg:h-[150px] xl:h-[175px] 2xl:h-[220px] overflow-hidden">
+                <span
+                  className={`
+                h-[8px] w-[8px] sm:h-4 sm:w-4
+                xl:h-12 xl:w-[18px]`}
+                >
+                  {" "}
+                </span>
+                <div className="flex items-center xl:justify-end h-[17.875vw] sm:h-[16vw] md:h-[14vw] lg:h-[13.5vw] 2xl:h-[290px] overflow-hidden">
                   {"tech".split("").map((letter, index) =>
                     index % 2 === 0 ? (
                       <div
@@ -75,10 +86,10 @@ const Hero = () => {
                   )}
                 </div>
               </div>
-              <div className="flex text-[#FFFFFF]/50 text-[76px] sm:text-[144px] md:text-[170px] lg:text-[230px] xl:text-[290px]  2xl:text-[387px]">
+              <div className="flex text-[#FFFFFF]/50 text-[21.313vw] sm:text-[22.313vw] 2xl:text-[390px]">
                 {!isQuestionReady ? (
                   <>
-                    <div className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]  overflow-hidden  ">
+                    <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden">
                       {"alliance".split("").map((letter, index) =>
                         index % 2 === 0 ? (
                           <div
@@ -98,8 +109,8 @@ const Hero = () => {
                       )}
                     </div>
                     <div className="tracking-tighter relative cursor-pointer">
-                      <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
-                        <div className="-translate-y-[100%] flex flex-col justify-center animate-v-tb-scroll-lg">
+                      <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden">
+                        <div className="-translate-y-[100%] flex flex-col justify-center gap-[10vw] animate-v-tb-scroll-lg">
                           <QuestionMark />
                           <QuestionMark />
                           <QuestionMark />
@@ -109,18 +120,16 @@ const Hero = () => {
                   </>
                 ) : (
                   <>
-                    <div className="flex items-center h-[80px] sm:h-[110px] md:h-[130px] md:mb-[20px] lg:mb-0   lg:h-[240px] xl:h-[300px] 2xl:h-[300px]  overflow-hidden animated-text">
+                    <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden animated-text">
                       alliance
                     </div>
-                    <div className="flex items-center h-[80px] sm:h-[130px] lg:h-[240px] xl:h-[290px] 2xl:h-[300px] overflow-hidden">
-                      <div className="flex flex-col justify-center items-center gap-[18px]">
-                        <QuestionMarkAnimated />
-                      </div>
+                    <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden">
+                      <QuestionMarkAnimated />
                     </div>
                   </>
                 )}
               </div>
-              <div className="w-[80px] h-[67px] mt-8"></div>
+              <div className="hidden md:block w-[80px] h-[67px] mt-8"></div>
             </>
           )}
         </div>
