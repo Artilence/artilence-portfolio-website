@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed px-[18px] py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[49px] ${
+        className={`hello fixed px-[18px] py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[49px] ${
           state && "min-h-screen"
         }`}
       >

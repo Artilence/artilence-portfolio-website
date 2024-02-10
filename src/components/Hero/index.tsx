@@ -133,7 +133,7 @@ const Hero = () => {
             </>
           )}
         </div>
-        <TechAnimation />
+        {/* <TechAnimation /> */}
       </div>
     </>
   );
