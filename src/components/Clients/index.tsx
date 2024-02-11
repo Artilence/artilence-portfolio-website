@@ -26,10 +26,16 @@ const Clients = () => {
         loop
         modules={[Autoplay]}
         className="mySwiper overflow-hidden bg-white"
+        spaceBetween={60}
       >
         {clientsArray?.map(({ id, src, alt }) => (
-          <SwiperSlide key={id} className="flex justify-center items-center">
-            <Image src={src} alt={alt} width={235} className="py-40" />
+          <SwiperSlide key={id} className="flex justify-center items-center ">
+            <Image
+              src={src}
+              alt={alt}
+              width={235}
+              className="px-[6.302vw] py-[7.813vw] 3xl:px-[120px] 3xl:py-[150px]"
+            />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -31,7 +31,7 @@ const Hero = () => {
       <div className="bg-primary">
         <div
           className={`relative justify-end min-h-[70vh] pb-8
- w-full flex flex-col xl:justify-end font-bold relative lg:min-h-screen  w-[85.78%] max-w-[1676px] mx-auto 
+ flex flex-col xl:justify-end font-bold relative lg:min-h-screen  w-[85.78%] max-w-[1676px] mx-auto 
         `}
         >
           {startScrollRoutine ? (

@@ -6,12 +6,9 @@ const Footer = () => {
     <div className="bg-primary">
       <div
         className={`
-    flex flex-col py-[11px]  mx-auto
-    px-8
-     sm:py-[20px]
-    md:py-[32px]
-     xl:py-[64px] 
-    2xl:max-w-[1676px]
+    flex flex-col pt-[7.813vw] pb-[2.448vw]
+w-[85.78%] max-w-[1676px] mx-auto
+3xl:pt-[150px] 3xl:pb-[47px]
      `}
       >
         <div
@@ -23,46 +20,29 @@ relative  flex flex-wrap justify-between gap-6 z-0
           {socialIcons?.map(({ id, component }) => (
             <div
               key={id}
-              className={`relative group w-[58px] h-[58px] flex justify-center items-center  border border-white hover:border-primary rounded-full
-           sm:w-[130px] sm:h-[130px] 
-           md:w-[170px] md:h-[170px]  
-           lg:w-[220px] lg:h-[220px] lg:border-2
-           xl:w-[200px] xl:h-[200px]
-           2xl:w-[350px] 2xl:h-[350px] 2xl:border-[5px]
-
+              className={`relative group w-[19.167vw] h-[19.167vw]  flex justify-center items-center  border border-white hover:border-primary rounded-full
+              border-[0.26vw]
+           3xl:w-[368px] 3xl:h-[368px] 3xl:border-[5px]
             `}
             >
-              <div className="text-[8px] text-white group-hover:text-primary z-10">
+              <div className="group-hover:text-primary z-10">
                 {component({
-                  className: `h-[21px] w-[21px] fill-white group-hover:fill-primary
-                 sm:h-[60px] sm:w-[60px] 
-                 md:h-[70px] md:w-[70px]
-                 lg:h-[100px] lg:w-[100px]
-                 xl:h-[100px] xl:w-[100px]
-                 2xl:h-[156px] 2xl:w-[156px]
+                  className: `h-[7.604vw] w-[7.604vw] fill-white group-hover:fill-primary
+                  3xl:h-[146px] 3xl:w-[146px]
                   `,
                 })}
               </div>
               <div
-                className={`scale-0 absolute w-[70px] h-[70px] rounded-full bg-yellow aspect-square group-hover:animate-grow-circle -z-10
-             sm:w-[160px] sm:h-[160px]
-             md:w-[200px] md:h-[200px]
-             lg:w-[250px] lg:h-[250px]
-             xl:w-[250px] xl:h-[250px]
-
-           2xl:w-[450px] 2xl:h-[450px]
+                className={`scale-0 absolute w-[23.438vw] h-[23.438vw] rounded-full bg-yellow aspect-square group-hover:animate-grow-circle -z-10
+           3xl:w-[450px] 3xl:h-[450px]
               `}
               ></div>
             </div>
           ))}
         </div>
         <div
-          className={`flex justify-between  items-end text-white text-[6px] mt-[16px] font-normal tracking-[2.5px]
-     sm:text-[12px] 
-     md:text-[16px] md:mt-[32px]
-     lg:text-[20px] lg:mt-[48px] 
-     xl:mt-[64px]
-     2xl:mt-[100px]
+          className={`flex justify-between  items-end text-white text-[1.302vw] mt-[5.208vw] font-normal 
+     3xl:text-[25px] 3xl:mt-[100px]
 
       `}
         >
