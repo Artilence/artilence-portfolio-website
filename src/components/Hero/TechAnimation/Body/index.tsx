@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import Sphere from "../Sphere";
 import { shells } from "@/constants";
 import Valence from "../Valence";
+import { isMobileScreen } from "..";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,7 +65,10 @@ const Body: React.FC<IAnimationBodyProps> = ({
         ref={groupRef}
         onPointerMissed={() => (navigate("/"), setIsAnimationRunning(true))}
       >
-        <Sphere r={30} setIsAnimationRunning={setIsAnimationRunning} />
+        <Sphere
+          r={isMobileScreen() ? 20 : 30}
+          setIsAnimationRunning={setIsAnimationRunning}
+        />
         {Array.from({ length: shells.length }, (_, index) => index + 1).map(
           (i) => {
             var shellCountIndex = (i - 1) % shells.length;

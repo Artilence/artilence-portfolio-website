@@ -28,19 +28,18 @@ const Hero = () => {
 
   return (
     <>
-      <div className="px-[18px] bg-primary">
+      <div className="bg-primary">
         <div
-          className={`relative justify-end min-h-[40vh] pb-8
-          sm:min-h-[60vh]
- w-full flex flex-col xl:justify-end font-bold relative lg:min-h-screen  max-w-[1676px] mx-auto
+          className={`relative justify-end min-h-[70vh] pb-8
+ w-full flex flex-col xl:justify-end font-bold relative lg:min-h-screen  w-[85.78%] max-w-[1676px] mx-auto 
         `}
         >
           {startScrollRoutine ? (
             <ScrollRoutine />
           ) : (
             <>
-              <div className="flex text-[12.5vw] sm:flex-row text-white font-light 2xl:text-[240px]">
-                <div className="flex items-center h-[17.875vw] sm:h-[16vw] md:h-[15vw] lg:h-[14.5vw] 2xl:h-[290px] tracking-wide overflow-hidden">
+              <div className="flex text-[7.813vw] sm:flex-row text-white font-light 3xl:text-[150px]">
+                <div className="flex items-center h-[9.0vw] tracking-wide overflow-hidden 3xl:h-[172.8px]">
                   {"finding".split("").map((letter, index) =>
                     index % 2 === 0 ? (
                       <div
@@ -66,7 +65,7 @@ const Hero = () => {
                 >
                   {" "}
                 </span>
-                <div className="flex items-center xl:justify-end h-[17.875vw] sm:h-[16vw] md:h-[14vw] lg:h-[13.5vw] 2xl:h-[290px] overflow-hidden">
+                <div className="flex items-center xl:justify-end h-[9.0vw] overflow-hidden 3xl:h-[172.8px]">
                   {"tech".split("").map((letter, index) =>
                     index % 2 === 0 ? (
                       <div
@@ -86,10 +85,10 @@ const Hero = () => {
                   )}
                 </div>
               </div>
-              <div className="flex text-[#FFFFFF]/50 text-[21.313vw] sm:text-[22.313vw] 2xl:text-[390px]">
+              <div className="flex text-[#FFFFFF]/50 text-[20.313vw] 3xl:text-[390px]">
                 {!isQuestionReady ? (
                   <>
-                    <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden">
+                    <div className="flex items-center h-[20.313vw] overflow-hidden 3xl:h-[390px] ">
                       {"alliance".split("").map((letter, index) =>
                         index % 2 === 0 ? (
                           <div
@@ -109,7 +108,7 @@ const Hero = () => {
                       )}
                     </div>
                     <div className="tracking-tighter relative cursor-pointer">
-                      <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden">
+                      <div className="flex items-center h-[20.313vw] overflow-hidden 3xl:h-[390px]">
                         <div className="-translate-y-[100%] flex flex-col justify-center gap-[10vw] animate-v-tb-scroll-lg">
                           <QuestionMark />
                           <QuestionMark />
@@ -120,21 +119,21 @@ const Hero = () => {
                   </>
                 ) : (
                   <>
-                    <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden animated-text">
+                    <div className="flex items-center h-[20.313vw] overflow-hidden animated-text 3xl:h-[390px]">
                       alliance
                     </div>
-                    <div className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px] overflow-hidden">
+                    <div className="flex items-center h-[20.313vw] overflow-hidden 3xl:h-[390px]">
                       <QuestionMarkAnimated />
                     </div>
                   </>
                 )}
               </div>
-              <div className="hidden md:block w-[80px] h-[67px] mt-8"></div>
+              <div className="h-[40px] w-[80px] md:h-[67px] mt-8"></div>
             </>
           )}
         </div>
-        {/* <TechAnimation /> */}
       </div>
+      <TechAnimation />
     </>
   );
 };

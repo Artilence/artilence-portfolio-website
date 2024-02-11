@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -13,7 +12,7 @@ export var Colors = {
   yellow: 0xcfff47,
   gray: 0x676767,
 };
-
+export const isMobileScreen = () => window.innerWidth < 768;
 const TechAnimation = () => {
   const [isAnimationRunning, setIsAnimationRunning] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any>();
@@ -29,35 +28,44 @@ const TechAnimation = () => {
   }, [selectedId]);
 
   return (
-    <div className="w-screen h-screen bg-primary world-3d py-16 mt-16">
+    <div className="w-screen h-screen bg-primary world-3d">
       <Canvas
         shadows
         camera={{
           position: [0, -500, 200],
-          fov: 45,
-          zoom: 0.8,
+          fov: isMobileScreen() ? 60 : 45,
+          zoom: 2.0,
         }}
         orthographic
       >
         {selectedId &&
+          !isMobileScreen() &&
           selectedItem &&
           (dialogPosition === "left" ? (
             <TechDialog
               selectedItem={selectedItem}
               dialogImage="/ldialog.svg"
-              position={[-290, 250, 0]}
+              position={
+                window.innerWidth > 768 && window.innerWidth < 1200
+                  ? [0, 250, 80]
+                  : [-290, 250, 0]
+              }
             />
           ) : (
             <TechDialog
               selectedItem={selectedItem}
               dialogImage="/ldialog.svg"
-              position={[180, 250, 0]}
+              position={
+                window.innerWidth > 768 && window.innerWidth < 1200
+                  ? [0, 250, -180]
+                  : [180, 250, 0]
+              }
             />
           ))}
 
         {/* <Stats /> */}
 
-        <OrbitControls enableZoom={false} makeDefault />
+        {/* <OrbitControls enableZoom={false} makeDefault /> */}
         <ambientLight intensity={1.5} />
         <directionalLight
           intensity={4.5}

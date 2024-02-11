@@ -7,6 +7,9 @@ export default {
   ],
 theme: {
     extend: {
+  screens: {
+    '3xl': '1920px'
+      },
 fontFamily: {
         primary: "Disposable Droid BB",
       },

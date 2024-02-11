@@ -15,16 +15,16 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`hello fixed px-[18px] py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[49px] ${
+        className={`fixed py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[49px] ${
           state && "min-h-screen"
         }`}
       >
-        <div className="flex flex-col  max-w-[1676px] mx-auto md:flex-row">
+        <div className="flex flex-col w-[85.78%] max-w-[1676px] mx-auto md:flex-row">
           <div className="flex items-center justify-between md:block">
             <a href="/">
-              <LogoLight className="hidden md:block" />
+              <LogoLight className="hidden lg:block" />
               <img
-                className="sm:hidden"
+                className="lg:hidden"
                 src="/logo-icon.png"
                 width="32"
                 height="32"
@@ -77,7 +77,7 @@ const Navbar = () => {
                     {
                       <a
                         href={item.path}
-                        className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[20px]"
+                        className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[16px]"
                       >
                         {item.title}
                       </a>

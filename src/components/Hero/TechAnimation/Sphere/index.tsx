@@ -30,7 +30,7 @@ interface SphereProps {
 const Sphere: React.FC<SphereProps> = ({
   x = 0,
   y = 0,
-  r = 10,
+  r = 5,
   id,
   src,
   setIsAnimationRunning,

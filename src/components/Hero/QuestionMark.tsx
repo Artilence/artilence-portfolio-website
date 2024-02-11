@@ -8,12 +8,8 @@ const QuestionMark = ({ color }: IQuestionMark) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`relative z-0 top-0
-       w-[40px] h-[42px]
-       sm:w-[80px] sm:h-[88px]
-       md:w-[100px] md:h-[100px]
-       lg:w-[140px] lg:h-[140px]
-       xl:w-[190px] xl:h-[190px]
-       2xl:w-[220px] 2xl:h-[220px]
+       w-[10.052vw] h-[10.833vw]
+       3xl:w-[192.998px] 3xl:h-[192.998px]
         `}
       >
         <path
@@ -25,12 +21,8 @@ const QuestionMark = ({ color }: IQuestionMark) => {
       </svg>
       <div
         className={` bg-[#FFFFFF]/50 rounded-full
-        w-[14px] h-[14px] ml-[1px] 
-        sm:w-[24px] sm:h-[24px] sm:ml-[4px]
-        md:w-[28px] md:h-[28px] sm:ml-[5px]
-        lg:w-[41px] lg:h-[41px] sm:ml-[6px]
-        xl:w-[52px] xl:h-[52px]
-        2xl:w-[58px] 2xl:h-[58px]
+        w-[3vw] h-[3vw] ml-[0.417vw] 
+        3xl:w-[57.6px] 3xl:h-[57.6px] 3xl:ml-[8px]
           ${color && "bg-yellow"}`}
       ></div>
     </div>

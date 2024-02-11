@@ -3,7 +3,7 @@ import { Group } from "three";
 import { useFrame } from "@react-three/fiber";
 
 import Torus from "../Torus";
-import { Colors } from "..";
+import { Colors, isMobileScreen } from "..";
 import Sphere from "../Sphere";
 
 interface ValenceProps {
@@ -27,7 +27,7 @@ const Valence: React.FC<ValenceProps> = ({
   const height = window.innerHeight;
 
   const baseRadius = width > height ? height - 40 / 2 : width - 40 / 2;
-  const radius = 50 + (baseRadius / 30) * ringNumber;
+  const radius = (isMobileScreen() ? 20 : 50) + (baseRadius / 30) * ringNumber;
   const baseRotation = 0.005;
 
   const groupRef = useRef<Group>(null!);
@@ -67,6 +67,7 @@ const Valence: React.FC<ValenceProps> = ({
               name={name}
               setIsAnimationRunning={setIsAnimationRunning}
               setDialogPosition={setDialogPosition}
+              r={isMobileScreen() ? 4 : 10}
             />
           );
         })}

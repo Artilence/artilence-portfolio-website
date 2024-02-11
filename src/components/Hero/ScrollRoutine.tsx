@@ -34,8 +34,8 @@ const ScrollRoutine = () => {
   }, [textRef, textRef2, scrollRef]);
   return (
     <div className="relative">
-      <div className="flex flex-col text-[12.5vw]  sm:flex-row 2xl:text-[240px] text-white font-light relative top-0 text-white">
-        <div className="flex items-center h-[17.875vw] sm:h-[16vw] md:h-[15vw] lg:h-[14.5vw] 2xl:h-[290px] overflow-hidden">
+      <div className="flex flex-col text-[7.813vw]  sm:flex-row 2xl:text-[240px] text-white font-light relative top-0 text-white 3xl:text-[150px]">
+        <div className="flex items-center h-[9.0vw]  overflow-hidden 3xl:h-[172.8px]">
           <div className="tracking-wide flex" ref={textRef}>
             {"finding".split("").map((letter, index) => (
               <div key={index}>{letter}</div>
@@ -53,17 +53,17 @@ const ScrollRoutine = () => {
           </div>
         </div>
       </div>
-      <div className="alliance flex text-yellow text-[21.313vw] sm:text-[22.313vw] 2xl:text-[390px] overflow-hidden">
+      <div className="alliance flex text-yellow text-[20.313vw] overflow-hidden 3xl:text-[390px]">
         <div
-          className="flex items-center h-[18vw] sm:h-[19vw] lg:h-[20vw] 2xl:h-[310px]"
+          className="flex items-center h-[20.313vw] 3xl:h-[390px]"
           ref={textRef2}
         >
           alliance
-          <div className="flex items-center h-[25vw]  overflow-hidden"></div>
+          <div className="flex items-center h-[20.313vw]  overflow-hidden 3xl:h-[390px]"></div>
           <QuestionMark color="#CFFF47" />
         </div>
       </div>
-      <div className="hidden md:block overflow-hidden mt-8">
+      <div className="overflow-hidden mt-8">
         <div ref={scrollRef} className="flex items-center justify-center">
           <ScrollAnimation />
         </div>
