@@ -34,7 +34,7 @@ const TechAnimation = () => {
         camera={{
           position: [0, -500, 200],
           fov: isMobileScreen() ? 60 : 45,
-          zoom: 2.5,
+          zoom: 2.0,
         }}
         orthographic
       >
@@ -48,7 +48,7 @@ const TechAnimation = () => {
               position={
                 window.innerWidth > 768 && window.innerWidth < 1200
                   ? [0, 250, 80]
-                  : [-310, 250, 0]
+                  : [-270, 250, 0]
               }
             />
           ) : (
@@ -58,7 +58,7 @@ const TechAnimation = () => {
               position={
                 window.innerWidth > 768 && window.innerWidth < 1200
                   ? [0, 250, -180]
-                  : [200, 250, 0]
+                  : [175, 250, 0]
               }
             />
           ))}
