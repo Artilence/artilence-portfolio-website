@@ -196,6 +196,14 @@ h2 {
   width: 40px;
   border-radius: 50%;
   color: white;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+  }
 }
 
 .swiper-button-prev,

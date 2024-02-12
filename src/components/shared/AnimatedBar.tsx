@@ -1,7 +1,7 @@
 const AnimatedBar = ({ isInviewport, className }: IAnimatedBarProps) => {
   return (
     <div
-      className={`h-[8px] bg-yellow xl:h-[11px]
+      className={`h-[0.573vw] bg-yellow 3xl:h-[11px]
           ${isInviewport && "animate-expand"}
           ${className || ""}
         `}
