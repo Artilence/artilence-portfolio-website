@@ -35,15 +35,16 @@ const Connect = () => {
       3xl:p-[96px] 3xl:rounded-[60px] 3xl:gap-[65px] 3xl:rounded-bl-none justify-between
       `}
         >
-          <h4 className="uppercase text-[1.667vw] font-normal 3xl:text-[32px]">
+          <h4 className="uppercase text-[2.667vw] md:text-[1.99vw] font-normal 3xl:text-[32px]">
             connect with us
           </h4>
           <Input label="Full Name" placeholder="Enter your name" />
           <Input label="E-mail" placeholder="Enter your email" />
+          {/* </div> */}
           <div className="flex">
             <div
               className={`
-uppercase rounded-full border  border-primary text-primary text-[1.042vw] cursor-pointer hover:bg-primary hover:text-white py-[0.729vw] px-[3.177vw] 3xl:text-[20px] 3xl:px-[61px]  3xl:py-[14px]
+uppercase rounded-full border  border-primary text-primary text-[2.042vw] md:text-[1.99vw] cursor-pointer hover:bg-primary hover:text-white py-[0.729vw] px-[3.177vw] 3xl:text-[20px] 3xl:px-[61px]  3xl:py-[14px]
         `}
             >
               Connect

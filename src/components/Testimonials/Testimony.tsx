@@ -6,12 +6,12 @@ const Testimony: FC<ITestimonyProps> = ({ src, alt, name, review }) => {
       <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
         <figure className="max-w-screen-sm mx-auto">
           <img
-            className="h-[120px] w-[120px] mx-auto mb-6 text-gray-400 rounded-full before:bg-primary border-[6px] border-primary"
+            className="h-[21.25vw] w-[21.25vw] md:h-[15.25vw] md:w-[15.25vw] lg:h-[11.25vw] lg:w-[11.25vw] mx-auto mb-6 text-gray-400 rounded-full before:bg-primary border-[1.313vw] md:border-[0.6vw] border-primary h-[120px] w-[120px] 3xl:border-[6px]"
             src={src}
             alt={alt}
           />
           <blockquote>
-            <p className="text-[22px] font-light text-gray-900 dark:text-white">
+            <p className="text-[3.146vw] md:text-[2.302vw] font-light text-gray-900 dark:text-white 3xl:text-[22px]">
               "{review}"
             </p>
           </blockquote>
