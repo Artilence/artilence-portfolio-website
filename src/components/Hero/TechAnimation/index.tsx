@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Body from "./Body";
 import { shells } from "@/constants";
 import TechDialog from "./TechDialog";
+import { OrbitControls } from "@react-three/drei";
 
 export var Colors = {
   white: 0xffffff,
@@ -65,7 +66,14 @@ const TechAnimation = () => {
 
         {/* <Stats /> */}
 
-        {/* <OrbitControls enableZoom={false} makeDefault /> */}
+        <OrbitControls
+          enableZoom={false}
+          makeDefault
+          maxAzimuthAngle={0.2}
+          minAzimuthAngle={-0.2}
+          maxPolarAngle={Math.PI}
+          minPolarAngle={2.8}
+        />
         <ambientLight intensity={1.5} />
         <directionalLight
           intensity={4.5}

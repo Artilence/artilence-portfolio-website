@@ -6,6 +6,7 @@ import { useRef } from "react";
 import QuestionMark from "./QuestionMark";
 import { getTimeline } from "@/utils/getTimeline";
 import ScrollAnimation from "../shared/ScrollAnimation";
+import { getTimelineStart } from "@/utils/getTimelineStart";
 
 gsap.registerPlugin(ScrollTrigger);
 const ScrollRoutine = () => {
@@ -14,19 +15,29 @@ const ScrollRoutine = () => {
   const scrollRef = useRef<HTMLDivElement>(null!);
 
   useGSAP(() => {
-    const textHidingTimeline = getTimeline(textRef);
+    const textHidingTimeline = getTimeline(
+      textRef,
+      getTimelineStart(window.innerWidth).startString
+    );
     textHidingTimeline.to(textRef.current, {
       y: "100%",
       duration: 1,
     });
 
-    const textHidingTimeline2 = getTimeline(textRef2);
+    const textHidingTimeline2 = getTimeline(
+      textRef2,
+      getTimelineStart(window.innerWidth).startString
+    );
     textHidingTimeline2.to(textRef2.current, {
       y: "100%",
       duration: 1,
     });
 
-    const textHidingTimeline3 = getTimeline(".alliance", "top top", "30% top");
+    const textHidingTimeline3 = getTimeline(
+      ".alliance",
+      getTimelineStart(window.innerWidth).startString,
+      "30% top"
+    );
     textHidingTimeline3.to(scrollRef.current, {
       y: "100%",
       duration: 1,

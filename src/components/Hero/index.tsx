@@ -132,8 +132,8 @@ const Hero = () => {
             </>
           )}
         </div>
+        <TechAnimation />
       </div>
-      <TechAnimation />
     </>
   );
 };
