@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center w-[90%] text-white  p-6">
         <LogoLight />
         <div className="flex gap-4 font-light uppercase text-xl">
-          <div className="">What we do</div>
+          <div className="">What we do </div>
           <div className="">Our Partners</div>
           <div className="">Client Testimonials</div>
           <div className="">Contact Us</div>

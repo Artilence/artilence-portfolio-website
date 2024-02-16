@@ -21,12 +21,35 @@ const TechAnimation = () => {
     null
   );
   const { id: selectedId } = useParams();
+  const [zoom, setZoom] = useState(2);
 
   useEffect(() => {
     if (selectedId) {
       setSelectedItem(shells.flat().find((shell) => shell.id === selectedId));
     }
   }, [selectedId]);
+    // Calculate zoom level based on viewport width
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width > 1440) {
+        setZoom(3);
+      } else if (width > 1200) {
+        setZoom(2);
+      } else {
+        setZoom(1.5);
+      }
+    };
+
+    // Initial call
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="w-screen h-screen bg-primary world-3d">
@@ -35,9 +58,10 @@ const TechAnimation = () => {
         camera={{
           position: [0, -500, 200],
           fov: isMobileScreen() ? 60 : 45,
-          zoom: 2.0,
+          zoom:  zoom,
         }}
         orthographic
+        style={{ width: '100%', height: '100%' }}
       >
         {selectedId &&
           !isMobileScreen() &&
@@ -49,7 +73,7 @@ const TechAnimation = () => {
               position={
                 window.innerWidth > 768 && window.innerWidth < 1200
                   ? [0, 250, 80]
-                  : [-270, 250, 0]
+                  : [-285, 250, 0]
               }
             />
           ) : (
@@ -59,7 +83,7 @@ const TechAnimation = () => {
               position={
                 window.innerWidth > 768 && window.innerWidth < 1200
                   ? [0, 250, -180]
-                  : [175, 250, 0]
+                  : [185, 250, 0]
               }
             />
           ))}

@@ -1,7 +1,19 @@
 import { socialIcons } from "../../constants";
 import { navList } from "../Navbar";
+import { useState } from "react";
 
 const Footer = () => {
+  const [state, setState] = useState(false);
+
+  const navigation = navList?.map(({ name, href }) => ({
+    title: name,
+    path: href,
+    isDrapdown: false,
+  }));
+
+  const handleLinkClick = () => {
+    setState(false); // Close the mobile menu after clicking a link
+  };
   return (
     <div className="bg-primary">
       <div
@@ -47,25 +59,27 @@ relative  flex flex-wrap justify-between gap-6 z-0
       `}
         >
           <div className="flex-1 flex flex-col">
-            <span>+123455 555</span>
+            <span>+92 3366200544</span>
             <span>www.artilence.com</span>
           </div>
           <div
-            className={`flex-1 flex justify-end flex-wrap gap-x-2
-       md:gap-x-4
-       lg:gap-x-6
-       2xl:gap-x-[70px] 2xl:flex-[1.2]
-        `}
+            className={`nav-menu pb-3 mt-20 md:flex md:justify-end md:pb-0 md:mt-0 md:flex-1 ${
+              state ? "block min-h-[80vh]" : "hidden"
+            }`}
           >
-            {navList?.map(({ id, name, href }) => (
-              <a
-                href={href}
-                key={id}
-                className="hover:text-yellow cursor-pointer"
-              >
-                {name}
-              </a>
-            ))}
+            <ul className="items-center space-y-6 md:flex  md:gap-[35px] md:space-y-0">
+              {navigation.map((item, idx) => (
+                <li key={idx}>
+                  <a
+                    href={item.path}
+                    className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[16px]"
+                    onClick={handleLinkClick}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

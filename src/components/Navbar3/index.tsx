@@ -12,10 +12,14 @@ const Navbar = () => {
     isDrapdown: false,
   }));
 
+  const handleLinkClick = () => {
+    setState(false); // Close the mobile menu after clicking a link
+  };
+
   return (
     <>
       <nav
-        className={`fixed py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[49px] ${
+        className={`fixed py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[33px]  ${
           state && "min-h-screen"
         }`}
       >
@@ -71,21 +75,17 @@ const Navbar = () => {
             }`}
           >
             <ul className="items-center space-y-6 md:flex  md:gap-[35px] md:space-y-0">
-              {navigation.map((item, idx) => {
-                return (
-                  <li key={idx}>
-                    {
-                      <a
-                        href={item.path}
-                        className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[16px]"
-                        onClick={() => setState(false)}
-                      >
-                        {item.title}
-                      </a>
-                    }
-                  </li>
-                );
-              })}
+              {navigation.map((item, idx) => (
+                <li key={idx}>
+                  <a
+                    href={item.path}
+                    className="block text-white text-right text-4xl uppercase font-normal hover:text-yellow md:text-base lg:text-[16px]"
+                    onClick={handleLinkClick}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

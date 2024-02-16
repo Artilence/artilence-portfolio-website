@@ -26,7 +26,7 @@ const Connect = () => {
             <br />
             go
           </div>
-          <AnimatedBar isInviewport={isInViewport} />
+          <AnimatedBar isInviewport={isInViewport}  className="md:max-w-[100%] xl:max-w-[550px]" />
         </div>
         <div
           className={`
@@ -38,8 +38,11 @@ const Connect = () => {
           <h4 className="uppercase text-[2.667vw] md:text-[1.99vw] font-normal 3xl:text-[32px]">
             connect with us
           </h4>
-          <Input label="Full Name" placeholder="Enter your name" />
-          <Input label="E-mail" placeholder="Enter your email" />
+          <Input label="Full Name" placeholder="Enter your name"  />
+          <Input label="E-mail" placeholder="Enter your email"  />
+
+
+
           {/* </div> */}
           <div className="flex">
             <div
