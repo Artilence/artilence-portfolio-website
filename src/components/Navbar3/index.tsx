@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed py-[22px] z-20 bg-primary w-full md:text-sm md:border-none 2xl:py-[33px]  ${
+        className={`fixed py-[22px] z-20 bg-primary bg-opacity-60 w-full md:text-sm md:border-none 2xl:py-[20px]  ${
           state && "min-h-screen"
         }`}
       >
@@ -74,7 +74,7 @@ const Navbar = () => {
               state ? "block min-h-[80vh]" : "hidden"
             }`}
           >
-            <ul className="items-center space-y-6 md:flex  md:gap-[35px] md:space-y-0">
+            <ul className="items-center space-y-6 md:flex  md:gap-[35px] md:space-y-0 ">
               {navigation.map((item, idx) => (
                 <li key={idx}>
                   <a

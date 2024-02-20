@@ -13,10 +13,10 @@ const Services = () => {
   const isMainSlideInViewport = useIsInViewport(mainSlideRef);
 
   return (
-    <div className="bg-primary scroll-m-[147px]" id="what-we-do">
+    <div className="bg-primary scroll-m-[147px] " id="what-we-do">
       <ul id="cards">
         <li className="card" key={"unique-key"}>
-          <div className="card-body">
+          <div className="card-body ">
             <div
               className={`
       bg-shapes-bg bg-right bg-no-repeat bg-cover 
@@ -27,7 +27,9 @@ const Services = () => {
                 className={`
       max-w-[1676px] flex flex-col gap-5 justify-between items-between text-white mx-auto
       md:flex-row md:gap-36
-      2xl:py-[150px] 2xl:gap-52
+      2xl:py-[15%] 2xl:gap-52
+      
+
         `}
               >
                 <div
@@ -54,6 +56,8 @@ const Services = () => {
           max-w-[500px]
           mt-5
           relative -top-5
+          md:max-w-[57.5%]
+          xl:max-w-[280px]
           `}
                   />
                 </div>

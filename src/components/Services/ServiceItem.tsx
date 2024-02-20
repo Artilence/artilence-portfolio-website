@@ -12,7 +12,7 @@ const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
             >
               {title}
             </h4>
-            <AnimatedBar isInviewport={isInviewport || false} />
+            <AnimatedBar isInviewport={isInviewport || true} />
           </div>
         </div>
         <div
