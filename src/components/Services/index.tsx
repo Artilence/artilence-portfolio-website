@@ -26,8 +26,9 @@ const Services = () => {
               <div
                 className={`
       max-w-[1676px] flex flex-col gap-5 justify-between items-between text-white mx-auto
+      py-[15%] w-[85.78%] mx-auto
       md:flex-row md:gap-36
-      2xl:py-[15%] 2xl:gap-52
+      2xl:gap-52
       
 
         `}
@@ -54,7 +55,6 @@ const Services = () => {
                     isInviewport={isMainSlideInViewport || false}
                     className={`
           max-w-[500px]
-          mt-5
           relative -top-5
           md:max-w-[57.5%]
           xl:max-w-[280px]
@@ -87,7 +87,7 @@ const Services = () => {
           </div>
         </li>
         {Object.keys(techStack)?.map((key, index) => (
-          <li key={index} className="card">
+          <li key={index} className="card ">
             <div
               className="card-body bg-primary"
               ref={secondaySlidesRefs[index]}

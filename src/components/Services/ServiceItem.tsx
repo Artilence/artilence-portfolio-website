@@ -4,7 +4,7 @@ import Image from "../shared/Image";
 const ServiceItem = ({ title, imageInfo, isInviewport }: IServiceItemProps) => {
   return (
     <div className={``}>
-      <div className="max-w-[1676px] mx-auto flex flex-col xl:flex-row 2xl:min-h-screen gap-[305px]">
+      <div className="max-w-[1676px] mx-auto flex flex-col xl:flex-row 2xl:min-h-screen gap-[305px] py-[10%] w-[85.78%] mx-auto ">
         <div className={`bg-primary  xl:flex items-center`}>
           <div>
             <h4

@@ -11,7 +11,7 @@ const Testimony: FC<ITestimonyProps> = ({ src, alt, name, review }) => {
             alt={alt}
           />
           <blockquote>
-            <p className="text-[3.146vw] md:text-[2.302vw] font-light text-gray-900 dark:text-white 3xl:text-[22px]">
+            <p className="text-[3.146vw] md:text-[2.302vw] font-light text-gray-900 text-stone-500 3xl:text-[22px]">
               "{review}"
             </p>
           </blockquote>

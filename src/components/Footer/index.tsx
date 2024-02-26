@@ -29,27 +29,31 @@ relative  flex flex-wrap justify-between gap-6 z-0
 2xl:gap-[120px]
       `}
         >
-          {socialIcons?.map(({ id, component }) => (
+          {socialIcons?.map(({ id, component, link }) => (
+            <a href={link} target="_blank" rel="noopener noreferrer">
             <div
               key={id}
               className={`relative group w-[19.167vw] h-[19.167vw]  flex justify-center items-center  border border-white hover:border-primary rounded-full
-              border-[0.26vw]
-           3xl:w-[368px] 3xl:h-[368px] 3xl:border-[5px]
-            `}
-            >
-              <div className="group-hover:text-primary z-10">
-                {component({
-                  className: `h-[7.604vw] w-[7.604vw] fill-white group-hover:fill-primary
-                  3xl:h-[146px] 3xl:w-[146px]
-                  `,
-                })}
-              </div>
-              <div
-                className={`scale-0 absolute w-[23.438vw] h-[23.438vw] rounded-full bg-yellow aspect-square group-hover:animate-grow-circle -z-10
-           3xl:w-[450px] 3xl:h-[450px]
+                border-[0.26vw]
+                3xl:w-[368px] 3xl:h-[368px] 3xl:border-[5px]
               `}
-              ></div>
+            >
+              
+                <div className="group-hover:text-primary z-10">
+                  {component({
+                    className: `h-[7.604vw] w-[7.604vw] fill-white group-hover:fill-primary
+                      3xl:h-[146px] 3xl:w-[146px]
+                    `,
+                  })}
+                </div>
+                <div
+                  className={`scale-0 absolute w-[23.438vw] h-[23.438vw] rounded-full bg-yellow aspect-square group-hover:animate-grow-circle -z-10
+                    3xl:w-[450px] 3xl:h-[450px]
+                  `}
+                ></div>
+              
             </div>
+            </a>
           ))}
         </div>
         <div

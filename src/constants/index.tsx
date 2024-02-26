@@ -259,16 +259,19 @@ export const socialIcons: ImageObject2[] = [
     id: 1,
     component: (props) => <FaFacebook {...props} />,
     alt: "Facebook",
+    link: "https://www.facebook.com/artilencetech",
   },
   {
     id: 2,
     component: (props) => <FaInstagram {...props} />,
     alt: "Instagram",
+    link: "https://www.instagram.com/artilence.official/",
   },
   {
     id: 3,
     component: (props) => <FaLinkedinIn {...props} />,
     alt: "Linkedin",
+    link: "https://www.linkedin.com/company/artilencetechnology/",
   },
 ];
 
@@ -517,6 +520,7 @@ export interface ImageObject2 {
   id: number;
   component: React.FC<React.SVGProps<SVGSVGElement>>;
   alt: string;
+  link: string;
   span?: number;
   width?: number;
 }

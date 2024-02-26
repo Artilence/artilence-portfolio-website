@@ -45,7 +45,7 @@ const ScrollRoutine = () => {
   }, [textRef, textRef2, scrollRef]);
   return (
     <div className="relative">
-      <div className="flex flex-col text-[7.813vw]  sm:flex-row 2xl:text-[240px] text-white font-light relative top-0 text-white 3xl:text-[150px]">
+      <div className="flex flex-col text-[7.813vw]  sm:flex-row text-white font-light relative top-0 text-white 3xl:text-[150px]">
         <div className="flex items-center h-[9.0vw]  overflow-hidden 3xl:h-[172.8px]">
           <div className="tracking-wide flex" ref={textRef}>
             {"finding".split("").map((letter, index) => (

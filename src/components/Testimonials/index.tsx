@@ -17,28 +17,30 @@ const Testimonials = () => {
   const isInView = useIsInViewport(clientTestimonialRef);
 
   return (
-    <div className="max-w-[100%] mx-auto">
+    <div className=" bg-white max-w-[100%] mx-auto">
+    <div className=" bg-white mx-auto">
       <div
-        className="bg-white p-8 md:py-48 xl:min-h-screen scroll-m-[147px] sticky top-0"
+        className="flex flex-col w-[85.78%] max-w-[1676px] mx-auto md:flex-row items-center md:py-48 xl:min-h-screen scroll-m-[147px] sticky"
         id="client-testimonials"
       >
-        <div >
+        <div className="">
           <div
             className="text-primary text-5xl font-light md:max-w-[60%] md:text-9xl xl:text-[174px] "
             ref={clientTestimonialRef}
           >
             client testimonial
           </div>
-          <AnimatedBar isInviewport={isInView} className="md:max-w-[57.5%] xl:max-w-[750px]" />
+          <AnimatedBar isInviewport={isInView} className="md:max-w-[64%] xl:max-w-[795px]" />
         </div>
       </div>
       {clientTestimonialsList?.length && (
         <Swiper
           slidesPerView={1}
-          className="mySwiper"
+          className="mySwiper  w-[85.78%] max-w-[1676px] mx-auto"
           navigation
           loop
           modules={[Navigation]}
+
         >
           <div className="swiper-button-prev!">
             <Image
@@ -66,6 +68,7 @@ const Testimonials = () => {
           </div>
         </Swiper>
       )}
+    </div>
     </div>
   );
 };
