@@ -20,7 +20,7 @@ const Services = () => {
             <div
               className={`
       bg-shapes-bg bg-right bg-no-repeat bg-cover 
- md:px-8 min-h-screen
+ md:px-8 min-h-screen h-[100vh]
       `}
             >
               <div
