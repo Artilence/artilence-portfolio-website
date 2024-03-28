@@ -57,12 +57,12 @@ relative  flex flex-wrap justify-between gap-6 z-0
           ))}
         </div>
         <div
-          className={`flex justify-between  items-end text-white text-[2.302vw] mt-[5.208vw] font-normal 
+          className={`flex justify-between  items-end text-white  text-[2.302vw] mt-[5.208vw] font-normal 
      3xl:text-[25px] 3xl:mt-[100px]
 
       `}
         >
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col md:text-base text-4xl lg:text-[16px]">
             <span>+92 3366200544</span>
             <span>www.artilence.com</span>
           </div>

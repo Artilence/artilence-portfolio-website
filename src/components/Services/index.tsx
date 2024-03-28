@@ -26,16 +26,17 @@ const Services = () => {
               <div
                 className={`
       max-w-[1676px] flex flex-col gap-5 justify-between items-between text-white mx-auto
-      py-[15%] w-[85.78%] mx-auto
+      py-[15%] md:py-[20%]  w-[85.78%] mx-auto
       md:flex-row md:gap-36
       2xl:gap-52
+      
       
 
         `}
               >
                 <div
                   className={`
-      flex-2 flex flex-col justify-between w-full
+      flex-2 flex flex-col w-full
         `}
                 >
                   <div
@@ -58,6 +59,7 @@ const Services = () => {
           relative -top-5
           md:max-w-[57.5%]
           xl:max-w-[280px]
+          mt-10
           `}
                   />
                 </div>

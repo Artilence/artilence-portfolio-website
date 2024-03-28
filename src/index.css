@@ -218,3 +218,20 @@ h2 {
 .swiper-button-prev {
   transform: rotate(180deg);
 }
+
+
+@keyframes expandImageAnimation {
+  from {
+    width: var(--start-width, 0); /* Using CSS variable for dynamic width */
+    opacity: 0;
+  }
+  50% {
+    width: var(--mid-width, 50%); /* Using CSS variable for dynamic width */
+    opacity: 0.5;
+  }
+  to {
+    width: var(--end-width, 100%); /* Using CSS variable for dynamic width */
+    opacity: 1;
+    padding: 10px 30px;
+  }
+}

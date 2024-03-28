@@ -15,7 +15,7 @@ export var Colors = {
 };
 export const isMobileScreen = () => window.innerWidth < 768;
 const TechAnimation = () => {
-  const [isAnimationRunning, setIsAnimationRunning] = useState(false);
+  const [isAnimationRunning, setIsAnimationRunning] = useState(true);
   const [selectedItem, setSelectedItem] = useState<any>();
   const [dialogPosition, setDialogPosition] = useState<"left" | "right" | null>(
     null
@@ -32,11 +32,13 @@ const TechAnimation = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width > 1440) {
+      if (width > 2000) {
         setZoom(3);
-      } else if (width > 1200) {
+      } else if (width > 1400) {
+        setZoom(2.5);
+      } else if (width > 1300) {
         setZoom(2);
-      } else {
+      }else {
         setZoom(1.5);
       }
     };
