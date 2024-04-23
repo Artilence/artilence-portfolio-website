@@ -65,6 +65,7 @@ relative  flex flex-wrap justify-between gap-6 z-0
           <div className="flex-1 flex flex-col md:text-base text-4xl lg:text-[16px]">
             <span>+92 3366200544</span>
             <span>www.artilence.com</span>
+            <span>© 2024 All Rights Reserved By Artilence</span>
           </div>
           <div
             className={`nav-menu pb-3 mt-20 md:flex md:justify-end md:pb-0 md:mt-0 md:flex-1 ${
