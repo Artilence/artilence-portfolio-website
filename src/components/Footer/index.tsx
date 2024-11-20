@@ -63,7 +63,7 @@ relative  flex flex-wrap justify-between gap-6 z-0
       `}
         >
           <div className="flex-1 flex flex-col md:text-base text-4xl lg:text-[16px]">
-            <span>+92 3366200544</span>
+            <span>042-32354438</span>
             <span>www.artilence.com</span>
             <span>© 2024 All Rights Reserved By Artilence</span>
           </div>
